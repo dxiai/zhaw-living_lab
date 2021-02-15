@@ -62,4 +62,4 @@ saveRDS(dd, file = paste0(getwd(),"/ZHAW_Evento_all-docs-content.Rda"))
 
 # Crosscheck the saved output
 # Load the above generated Evento dataframe into memory 
-# evento <- readRDS(file = paste0(getwd(),"/ZHAW_Evento_all-doc-Content.Rda"))
+# evento <- readRDS(file = paste0(getwd(),"/ZHAW_Evento_all-docs-content.Rda"))
