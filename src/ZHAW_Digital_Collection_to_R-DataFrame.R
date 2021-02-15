@@ -1,6 +1,3 @@
-# Set the directory to the application path and check it
-setwd(dirname(rstudioapi::getSourceEditorContext()$path)); getwd()
-
 # Load all required libraries and if not yet installed, install them
 if (!require('tidyverse')) install.packages('tidyverse'); library(tidyverse)
 if (!require('curl')) install.packages('curl'); library(curl)
@@ -8,6 +5,17 @@ if (!require('urltools')) install.packages('urltools'); library(urltools)
 if (!require('XML')) install.packages('XML'); library(XML)
 if (!require('svMisc')) install.packages('svMisc'); library(svMisc)
 if (!require('plyr')) install.packages('plyr'); library(plyr)
+
+# Set the directory to the application path
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+# temporary working directory
+tmpDir = paste0(getwd(),"/tmp")
+# set the director< path for the data that shall be shared
+setwd("..")
+dataDir =   paste0(getwd(),"/data")
+# Reset the directory to the application path
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+
 
 # initialise the OAI resumption pointer
 resumptionPointer = ""
@@ -40,7 +48,7 @@ for (i in 1:myNoReads) {
     # resumtionpointer Update has to come AFTER the first function call
     resumptionPointer = i*myNoDocsPerRead
     # read in and transform all records collected in one read cycle. 
-    for (j in 1 : myNoDocsPerRead){
+    for (j in 1 : 1){ # myNoDocsPerRead){
         # extract the XML elements
         myTreeRecord <-myRoot[["ListRecords"]][[j]]
         myTreeHeader <- myTreeRecord[["header"]]
@@ -64,7 +72,16 @@ for (i in 1:myNoReads) {
     # Stop the clock and display the actual status
     print(paste("Docs:",i*myNoDocsPerRead,"of",myNoReads*myNoDocsPerRead,"elapsed secs:",as.character((proc.time() - ptm)[3][[1]])))
 }
-# Store the digital collection as dataframe into the application directory
-saveRDS(mydf, file = paste0(getwd(),"/ZHAW_DC_All_Records.Rda"))
+
+# Store the digital collection as dataframe into the visible data directory
+# write_tsv(mydf,path = paste0(dataDir,"/ZHAW_DC_all_records.tsv"))
+
+###########################################################################
+# Store the digital collection as dataframe into the hidden temp directory
+saveRDS(mydf, file = paste0(tmpDir,"/ZHAW_DC_all_records.Rda"))
+
+# Crosscheck the saved output
+# Load the above generated Evento dataframe into memory 
+mydf <- readRDS(file = paste0(tmpDir,"/ZHAW_DC_all_records.Rda"))
 
 
