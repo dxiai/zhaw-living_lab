@@ -48,7 +48,7 @@ for (i in 1:myNoReads) {
     # resumtionpointer Update has to come AFTER the first function call
     resumptionPointer = i*myNoDocsPerRead
     # read in and transform all records collected in one read cycle. 
-    for (j in 1 : 1){ # myNoDocsPerRead){
+    for (j in 1 : myNoDocsPerRead){
         # extract the XML elements
         myTreeRecord <-myRoot[["ListRecords"]][[j]]
         myTreeHeader <- myTreeRecord[["header"]]
