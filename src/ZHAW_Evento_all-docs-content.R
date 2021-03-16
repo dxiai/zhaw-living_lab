@@ -1,10 +1,10 @@
-#' 
+#'
 #' | Date       | Friday Feb 12 2021
 #' | Author     | Daniel Bajka, bajk@zhaw.ch
 #' | Name       | ZHAW_Evento_all-doc-contents.R
 #' | Purpose    | Gather the documents content of all in the Input dataframe defined courses
-#'                and store the contents along with the course ids and short descriptions.    
-#' | Input      | "ZHAW_Evento_all-docs-url.Rda" 
+#'                and store the contents along with the course ids and short descriptions.
+#' | Input      | "ZHAW_Evento_all-docs-url.Rda"
 #' | Output     | "ZHAW_Evento_all-docs-content.Rda"
 #' | Error      | internally handled
 
@@ -41,13 +41,13 @@ dd <-  data.frame(matrix(data = NA, nrow = 0, ncol = 2))
 names(dd) =  c("course","text")
 
 # Parameter 'myDocStartPntr' and 'myDocEndPntr' can be adjusted to the individual goal
-# Furthermore the from evento gained list of all actual document URLs 'urlExt' 
+# Furthermore the from evento gained list of all actual document URLs 'urlExt'
 # can be organized prior looping over all or a subset of the in evento stored document library.
 myDocStartPntr = 1
-myDocEndPntr = nrow(urlExt)
+myDocEndPntr = 2 # nrow(urlExt)
 
 # Main loop to read in [1:nrow(urlExt)] documents
-for (i in 1:2){ # nrow(urlExt)){
+for (i in myDocStartPntr:myDocEndPntr){ # nrow(urlExt)){
     myURL <- tryCatch(urlExt[i,], error = function(e) returnValue())
     if(!is.null(myURL)){
         print(paste0(urlMain,myURL))
@@ -61,7 +61,7 @@ for (i in 1:2){ # nrow(urlExt)){
     # Used to bypass a Robot detection. 'myTimeStrecher' can be adapted according to the Robot sensitivity
     # myTimeStrecher = 3
     # Sys.sleep(abs(rnorm(1))* myTimeStrecher)
-    
+
     # While scraping the printout of the record number used as a visual progress control
     print(nrow(dd))
 }
@@ -74,6 +74,15 @@ write.csv(dd,file = paste0(dataDir,"/ZHAW_Evento_all-docs-content.csv"))
 # Save the scraped documents content into the hidee3n temp directory for the next step; text wrangling
 saveRDS(dd, file = paste0(tmpDir,"/ZHAW_Evento_all-docs-content.Rda"))
 
+
+############################################################################
 # Crosscheck the saved output
-# Load the above generated Evento dataframe into memory 
-dd <- readRDS(file = paste0(tmpDir,"/ZHAW_Evento_all-docs-content.Rda"))
+# Load the above generated Evento dataframe into memory
+
+digital_collection_txt <- readRDS(file = paste0(tmpDir,"/ZHAW_DC_All_Records.Rda"))
+
+evento_txt <- readRDS(file = paste0(tmpDir,"/ZHAW_Evento_all-docs-content.Rda"))
+
+evento_dtm <- read_csv(file = paste0(dataDir,"/ZHAW_Evento_term_freq_matrix.csv"))
+evento_ngram <- read_csv(file = paste0(dataDir,"/ZHAW_Evento_term_sdg_context.csv"))
+
