@@ -47,7 +47,7 @@ dataFile <- readRDS(file = paste0(tmpDir,"/ZHAW_Evento_all_preprocessed.Rda"))
 corp = corpus(dataFile,text_field = "text") # , docvars = "id")
 
 doc_vars = docvars(corp)
-# head(doc_vars)
+head(doc_vars)
 # No stemming since the words should be compared in their full lenght
 dtm_full = dfm(corp, tolower=T, remove = stopwords('de'), stem = F, remove_punct=T)
 # replace feacture counts per document > 1 to 1. Achieve a boolean dtm
