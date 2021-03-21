@@ -19,7 +19,7 @@ setwd("..")
 dir.data =   paste0(getwd(),"/data")
 # Reset the directory to the application path
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-
+getwd()
 
 # Function that transfroms the earlier labeled raw text into a dataframe
 ModuleDataPreprocessed <- function (my.input){  #,mySelection = c("lernziele","lerninhalt")){
@@ -132,4 +132,5 @@ evento.mtxJson <- toJSON(as.list(modules.dataFrame[1:16]))
 write(evento.mtxJson,  file = paste0(dir.tmp,"/ZHAW_Evento_all_cleaned.JSON"))
 
 # Store the digital collection as dataframe into the hidden temp directory
-saveRDS(modules.dataFrame, file = paste0(dir.tmp,"/ZHAW_Evento_all_cleaned.Rda"))
+# saveRDS(modules.dataFrame, file = paste0(dir.tmp,"/ZHAW_Evento_all_cleaned.Rda"))
+saveRDS(modules.dataFrame, file = paste0(getwd(),"/ZHAW_Evento_all_cleaned.Rda"))
