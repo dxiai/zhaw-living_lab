@@ -12,101 +12,101 @@ if (!require('rlang')) install.packages('rlang'); library(rlang)
 # Set the directory to the application path
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 # temporary working directory
-tmpDir = paste0(getwd(),"/tmp")
+tmp.dir = paste0(getwd(),"/tmp")
 # set the director< path for the data that shall be shared
 setwd("..")
-dataDir =   paste0(getwd(),"/data")
+data.dir =   paste0(getwd(),"/data")
 # Reset the directory to the application path
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 # Function that transfroms the earlier labeled raw text into a dataframe
-moduleDataPreprocessed <- function (myText){  #,mySelection = c("lernziele","lerninhalt")){
+ModuleDataPreprocessed <- function (my.input){  #,mySelection = c("lernziele","lerninhalt")){
 
-    moduleDataframe =  data.frame(matrix(data = NA, nrow = 0, ncol = 0))
-    # myText <- modulesText[1]
-    myText %>%
+    my.dataframe =  data.frame(matrix(data = NA, nrow = 0, ncol = 0))
+    # my.text <- modulesText[1]
+    my.input %>%
         strsplit("///") %>%
         unlist() %>%
         matrix(byrow=TRUE) %>%
-        data.frame(stringsAsFactors=FALSE) -> myDataset
+        data.frame(stringsAsFactors=FALSE) -> my.dataset
 
     ## Features in rows
-    moduleDataframe =  data.frame(matrix(data = NA, nrow = 0, ncol = 0))
+    my.dataframe =  data.frame(matrix(data = NA, nrow = 0, ncol = 0))
     # start wirh row 2 because row one always is " "
-    for(i in 2:nrow(myDataset)){
-        myDataset[i,] %>%
+    for(i in 2:nrow(my.dataset)){
+        my.dataset[i,] %>%
             strsplit(":") -> x
             if(is.na(x)==FALSE){
-                as.data.frame(x) -> myDatasetSplit
-                names(myDatasetSplit) = ""
-                as.data.frame(t(myDatasetSplit)) -> myDatasetSplit
-                moduleDataframe <- rbindFill(moduleDataframe,myDatasetSplit)
+                as.data.frame(x) -> my.dataset.split
+                names(my.dataset.split) = ""
+                as.data.frame(t(my.dataset.split)) -> my.dataset.split
+                my.dataframe <- rbindFill(my.dataframe,my.dataset.split)
             }
             else{
                 break
             }
     }
     if(!is.na(x)){
-        moduleDataframe %>%
+        my.dataframe %>%
             filter(is.na(V1)|is.na(V2)|is.null(V2)|V2 != " ") %>%
             group_by(V1) %>%
             summarise_each(funs(paste(., collapse = "//"))) %>%
-            pivot_wider(names_from = V1, values_from = V2) -> moduleDataframe
+            pivot_wider(names_from = V1, values_from = V2) -> my.dataframe
 
-        id_title = as.data.frame(c(evento_txt[i,1],evento_txt[i,2])) %>%
+        id.title = as.data.frame(c(evento.txt[i,1],evento.txt[i,2])) %>%
             t() %>%
             as.data.frame()
-        row.names(id_title) = ""
-        names(id_title) = c("id","title")
+        row.names(id.title) = ""
+        names(id.title) = c("id","title")
 
-        moduleDataframe <- cbind(id_title,moduleDataframe)
+        my.dataframe <- cbind(id.title,my.dataframe)
     }
-    return(moduleDataframe)
+    return(my.dataframe)
 }
 
 # This function is still a working prototype and does not stucture the JSON in a pretty formt yet
-create_JSON_substructure <- function(df){
-    dt <- as.data.table(df) %>%
+CreateJSONSubstructure <- function(my.input){
+    my.datatable <- as.data.table(df) %>%
         mutate_at(1,as.character) %>%
         mutate_at(2,as.character)
 
-    modul_list = course_list = {}
+    my.modul.list = my.course.list = {}
     # List of all labels
-    labels <- as.character(unique(df$V1))
+    labels <- as.character(unique(my.input$V1))
 
-    modul_labels <- c("Modul","Datum","Credits","Beschreibung")
-    modul_list <- sapply(modul_labels, function(x){
-        x.dt <- dt[V1==x, .(V2)]
-        x.dt
+    my.modul.labels <- c("Modul","Datum","Credits","Beschreibung")
+    my.modul.list <- sapply(my.modul.labels, function(x){
+        my.datatable.x <- my.datatable[V1==x, .(V2)]
+        my.datatable.x
     })
-    names(modul_list) <- modul_labels
+    names(my.modul.list) <- my.modul.labels
 
     # Create list of all modul related courses
-    course_labels <- labels[!(labels %in% modul_labels)]
-    course_list <- sapply(course_labels, function(x){
-        x.dt <- dt[V1==x, .(V2)]
-        x.dt
+    my.course.labels <- labels[!(labels %in% my.modul.labels)]
+    my.course.list <- sapply(my.course.labels, function(x){
+        my.datatable.x <- my.datatable[V1==x, .(V2)]
+        my.datatable.x
     })
 
     # combine list content with list labels
-    names(course_list) <- course_labels
+    names(my.course.list) <- my.course.labels
     # create a list in a list by appending the courses as one new Kurse sublist to the module items
-    modul_list$Kurse <- course_list
+    my.modul.list$Kurse <- my.course.list
     # transform the list structure into JSON for further cross plöattform use
-    df_json <- toJSON(modul_list,pretty = TRUE, na="null")
+    df.json <- toJSON(my.modul.list,pretty = TRUE, na="null")
     # Export the created Evento JSON file
-    write(df_json,  file = paste0(tmpDir,"/df.JSON"))
+    write(df.json,  file = paste0(tmp.dir,"/df.JSON"))
 }
 
 ################################################################################
 # Main Programm
 #########################################################
 # Read the proprocessed Evento raw data and remove duplicates
-evento_txt <- readRDS(file = paste0(tmpDir,"/ZHAW_Evento_all_preprocessed.Rda")) %>% distinct()
+evento_txt <- readRDS(file = paste0(tmp.dir,"/ZHAW_Evento_all_preprocessed.Rda")) %>% distinct()
 # Data filter: remove all modules without content
-modulesNoDesc <- filter(evento_txt, grepl('NA', text))
+modulesNoDesc <- filter(evento.txt, grepl('NA', text))
 # Data filter: keep all modules with content
-modulesWithDesc <- filter(evento_txt, !grepl('NA', text))
+modulesWithDesc <- filter(evento.txt, !grepl('NA', text))
 # Data filter: remove all modules defined as Nachprüfung
 modulesNachprfg <- filter(modulesWithDesc, grepl('Nachprüfung', text))
 # Data filter: all remaining datasets are valid and used for further analysis
@@ -123,7 +123,7 @@ for (i in 1:nrow(modulesRegular)){
 # Transform the dataframe into a JSON structure
 ev_mtx_json <- toJSON(as.list(moduleDataframe[1:16]))
 # Save the JSON File: Not YET the FINAL PRETTY JSON structure
-write(ev_mtx_json,  file = paste0(tmpDir,"/ZHAW_Evento_all_cleaned.JSON"))
+write(ev_mtx_json,  file = paste0(tmp.dir,"/ZHAW_Evento_all_cleaned.JSON"))
 
 # Store the digital collection as dataframe into the hidden temp directory
-saveRDS(moduleDataframe, file = paste0(tmpDir,"/ZHAW_Evento_all_cleaned.Rda"))
+saveRDS(moduleDataframe, file = paste0(tmp.dir,"/ZHAW_Evento_all_cleaned.Rda"))
