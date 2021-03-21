@@ -20,6 +20,8 @@ tmp.dir = paste0(getwd(),"/tmp")
 # set the director< path for the data that shall be shared
 setwd('..')
 data.dir =  paste0(getwd(),'/data')
+# Set the directory to the application path
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 # reset all open dev channels
 graphics.off()
 
@@ -44,7 +46,8 @@ ReadSdgXlsx <- function(my.path, my.lang, my.sdgNo){
 
 
 #>>>>>>>>>>>>>>>>>>>>Load preprocessed Evento dataframe into memory
-data.file <- readRDS(file = paste0(tmp.dir,"/ZHAW_Evento_all_preprocessed.Rda"))
+# data.file <- readRDS(file = paste0(tmp.dir,"/ZHAW_Evento_all_preprocessed.Rda"))
+data.file <- readRDS(file = paste0(getwd(),"/ZHAW_Evento_all_cleaned.Rda"))
 # crerate the corpus
 corp = corpus(data.file,text_field = "text") # , docvars = "id")
 

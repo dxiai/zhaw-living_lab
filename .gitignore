@@ -1,3 +1,7 @@
 /src/[Tt]mp
 /src/[Tt]ools
 .Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
