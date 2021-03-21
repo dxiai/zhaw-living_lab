@@ -1,20 +1,18 @@
 # dtm  sdg wordcloud comparison
 ##################################################################
-#
-# # connect the sustainability package
-# setwd("~/.R/library/dxiaiR")
-# # connect the sustainability package
-# devtools::document()
-# # Restart R Session
-# .rs.restartR()
 
-# # Load all required libraries and if not yet installed, install them
+
+#>>>>>>>>>>>>>>>>>>>> Load required libraries and if not yet installed, install them
 if (!require('tidyverse')) install.packages('tidyverse'); library(tidyverse)
 if (!require('quanteda')) install.packages('quanteda'); library(quanteda)
+if (!require('stringi')) install.packages('stringi'); library(stringi)
 
-# variables initialisation
+
+#>>>>>>>>>>>>>>>>>>>> variables initialisation
 tmpDir = ""; dataDir = ""; dataFile = ""; d = ""; sdg_1 = {}
 
+
+#>>>>>>>>>>>>>>>>>>>> directories initialization
 # Set the directory to the application path
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 # temporary working directory
@@ -22,20 +20,17 @@ tmpDir = paste0(getwd(),"/tmp")
 # set the director< path for the data that shall be shared
 setwd('..')
 dataDir =  paste0(getwd(),'/data')
-# Load preprocessed Evento dataframe into memory
-dataFile <- readRDS(file = paste0(tmpDir,"/ZHAW_Evento_all_preprocessed.Rda"))
-# No stemming since the words should be compared in their full lenght
-dtm = dfm(dataFile$text, tolower=T, remove = stopwords('de'), stem = F, remove_punct=T)
+# reset all open dev channels
+graphics.off()
 
 
-############################ Single list search from Excel original
+#>>>>>>>>>>>>>>>>>>>> Single sdg read from Excel original
 read_sdg_xlsx <- function(mypath, lang, sdgNo){
     library(readxl)
-    lang="de"
-
-    tmp <-read_xlsx(paste0(dataDir,eval(paste0("/SDG",sdgNo,".xlsx"))),sheet = lang, na = 'NULL')[2:nrow(dataset),paste0(lang,"_full")] %>%
+    tmp <-read_xlsx(paste0(dataDir,eval(paste0("/SDG",sdgNo,".xlsx"))),sheet = lang, na = 'NULL')[-1,paste0(lang,"_full")] %>%
+        # tmp <-read_xlsx(paste0(dataDir,eval(paste0("/SDG",sdgNo,".xlsx"))),sheet = lang, na = 'NULL')[2:nrow(dataset),paste0(lang,"_full")] %>%
         as_tibble() %>%
-    # clean the column by replacing NAs to ""
+        # clean the column by replacing NAs to ""
         mutate_at(c(1:1), ~replace(., is.na(.), ''))
     # rename column 1
     names(tmp) = "key"# %>%
@@ -45,32 +40,57 @@ read_sdg_xlsx <- function(mypath, lang, sdgNo){
     return(dictionary(setNames(as.list(tmp$key), tmp$value)))
 }
 
-# Loop over n SDG Excel files and save the created wordclouds
-for (no in 1:16){
+
+#>>>>>>>>>>>>>>>>>>>>Load preprocessed Evento dataframe into memory
+dataFile <- readRDS(file = paste0(tmpDir,"/ZHAW_Evento_all_preprocessed.Rda"))
+# crerate the corpus
+corp = corpus(dataFile,text_field = "text") # , docvars = "id")
+
+doc_vars = docvars(corp)
+# head(doc_vars)
+# No stemming since the words should be compared in their full lenght
+dtm_full = dfm(corp, tolower=T, remove = stopwords('de'), stem = F, remove_punct=T)
+# replace feacture counts per document > 1 to 1. Achieve a boolean dtm
+dtm_bool <- dfm_weight(dtm_full, scheme = "boolean")
+# dtm = dfm_trim(dtm_bool, min_termfreq = 1000 )
+
+#>>>>>>>>>>>>>>>>>>>> Loop over n SDG Excel files and save the created wordclouds
+for (no in 1:1){
     tryCatch(
         {
+            # assign the result of function read_sdg_xlsx to a dymamically generated variable
             assign(paste0("sdg_",no),read_sdg_xlsx(dataDir,"de",no))
             # create the wordcloud
-            dict_dtm = dfm_lookup(dtm,eval(parse(text=paste0("sdg_",no))), exclusive = TRUE)
-            # create a dtm dataframe
-            d <- convert(dict_dtm, to = "data.frame")
+            dict_dtm = dfm_lookup(dtm_bool,eval(parse(text=paste0("sdg_",no))), exclusive = TRUE)
+            dict_trl = convert(dict_dtm, to = "tripletlist") %>%
+                as.tibble() %>%
+                # add column with a reference to the line numbers corresponding to doc_vars
+                mutate(idx = str_replace_all(document,"text",''))
+
+            dd = cbind(dict_trl,doc_vars[as.numeric(dict_trl$idx),])
+
+
+                # # create a dtm dataframe
+                # d <- convert(dict_dtm, to = "data.frame")
             # prepare to save the wordcloud
-            png(paste0(tmpDir,"/sdg_",no,".png"), width=4, height=4, units="in", res=300)
+            # png(paste0(dataDir,"/sdg_",no,".png"), width=4, height=4, units="in", res=300)
             # plot a wordcloud containing the most frequent found sdg expressions in the corpus
 
-            textplot_wordcloud(dict_dtm, max_words = 30)
+            # textplot_wordcloud(dict_dtm, max_words = 30)
             ############################
-            dev.off()
-            print(no)
-            Sys.sleep(1)
+            # dev.off()
+            # print(paste("sdg_",no,"processed, plot generated and saved as:",paste0(dataDir,"/sdg_",no,".png")))
+            # Sys.sleep(1)
         },
         error=function(cond) {
+            dev.off()
             message("Here's the original error message:")
             message(cond)
             # Choose a return value in case of error
             return(NA)
         },
         warning=function(cond) {
+            dev.off()
             message("Here's the original warning message:")
             message(cond)
             # Choose a return value in case of warning
