@@ -4,7 +4,7 @@ if (!require('jsonlite')) install.packages('jsonlite'); library(jsonlite)
 if (!require('data.table')) install.packages('data.table'); library(data.table)
 if (!require('quanteda')) install.packages('quanteda'); library(quanteda)
 if (!require('methods')) install.packages('methods'); library(methods)
-if (!require('rockchalk')) install.packages('rockchalk'); library(rockchalk)
+# if (!require('rockchalk')) install.packages('rockchalk'); library(rockchalk)
 if (!require('stringi')) install.packages('stringi'); library(stringi)
 if (!require('stringr')) install.packages('stringr'); library(stringr)
 if (!require('rlang')) install.packages('rlang'); library(rlang)
@@ -19,7 +19,7 @@ dataDir =   paste0(getwd(),"/data")
 # Reset the directory to the application path
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
-# Function that transfroms the earlier labeled raw text into a dataframe 
+# Function that transfroms the earlier labeled raw text into a dataframe
 moduleDataPreprocessed <- function (myText){  #,mySelection = c("lernziele","lerninhalt")){
 
     moduleDataframe =  data.frame(matrix(data = NA, nrow = 0, ncol = 0))
@@ -40,14 +40,14 @@ moduleDataPreprocessed <- function (myText){  #,mySelection = c("lernziele","ler
                 as.data.frame(x) -> myDatasetSplit
                 names(myDatasetSplit) = ""
                 as.data.frame(t(myDatasetSplit)) -> myDatasetSplit
-                moduleDataframe <- rbindFill(moduleDataframe,myDatasetSplit) 
+                moduleDataframe <- rbindFill(moduleDataframe,myDatasetSplit)
             }
             else{
                 break
             }
     }
     if(!is.na(x)){
-        moduleDataframe %>% 
+        moduleDataframe %>%
             filter(is.na(V1)|is.na(V2)|is.null(V2)|V2 != " ") %>%
             group_by(V1) %>%
             summarise_each(funs(paste(., collapse = "//"))) %>%
@@ -69,30 +69,30 @@ create_JSON_substructure <- function(df){
     dt <- as.data.table(df) %>%
         mutate_at(1,as.character) %>%
         mutate_at(2,as.character)
-    
+
     modul_list = course_list = {}
     # List of all labels
     labels <- as.character(unique(df$V1))
-    
+
     modul_labels <- c("Modul","Datum","Credits","Beschreibung")
     modul_list <- sapply(modul_labels, function(x){
         x.dt <- dt[V1==x, .(V2)]
         x.dt
     })
     names(modul_list) <- modul_labels
-    
-    # Create list of all modul related courses    
+
+    # Create list of all modul related courses
     course_labels <- labels[!(labels %in% modul_labels)]
     course_list <- sapply(course_labels, function(x){
         x.dt <- dt[V1==x, .(V2)]
         x.dt
     })
-    
+
     # combine list content with list labels
     names(course_list) <- course_labels
     # create a list in a list by appending the courses as one new Kurse sublist to the module items
     modul_list$Kurse <- course_list
-    # transform the list structure into JSON for further cross plöattform use 
+    # transform the list structure into JSON for further cross plöattform use
     df_json <- toJSON(modul_list,pretty = TRUE, na="null")
     # Export the created Evento JSON file
     write(df_json,  file = paste0(tmpDir,"/df.JSON"))
@@ -114,7 +114,7 @@ modulesRegular <- filter(modulesWithDesc, !grepl('Nachprüfung', text))
 # Select the column with text
 modulesText <- modulesRegular[,3]
 # Prepare an empty dataframe for the collected and cleaned evento data
-moduleDataframe =  data.frame(matrix(data = NA, nrow = 0, ncol = 0))                                      
+moduleDataframe =  data.frame(matrix(data = NA, nrow = 0, ncol = 0))
 # for (i in 1:10){
 for (i in 1:nrow(modulesRegular)){
     moduleDataframe <- rbindFill(moduleDataframe,moduleDataPreprocessed(modulesText[i]))
