@@ -25,7 +25,7 @@ getwd()
 ModuleDataPreprocessed <- function (my.input){  #,mySelection = c("lernziele","lerninhalt")){
 
     # debug only
-    # my.input = modules.text[i]
+    my.input = modules.text[i]
 
     my.dataFrame =  data.frame(matrix(data = NA, nrow = 0, ncol = 0))
     # my.text <- modulesText[1]
@@ -108,7 +108,7 @@ CreateJSONSubstructure <- function(my.input){
 # Main Programm
 #########################################################
 # Read the proprocessed Evento raw data and remove duplicates
-evento.txt <- readRDS(file = paste0(dir.tmp,"/ZHAW_Evento_all_preprocessed.Rda")) %>% distinct()
+evento.txt <- readRDS(file = paste0(getwd(),"/ZHAW_Evento_all_preprocessed_NEW.Rda")) %>% distinct()
 # Data filter: remove all modules without content
 modules.noDesc <- filter(evento.txt, grepl('NA', text))
 # Data filter: keep all modules with content
@@ -121,9 +121,10 @@ modules.regular <- filter(modules.withDesc, !grepl('Nachprüfung', text))
 modules.text <- modules.regular[,3]
 # Prepare an empty dataframe for the collected and cleaned evento data
 modules.dataFrame =  data.frame(matrix(data = NA, nrow = 0, ncol = 0))
-for (i in 1:10){
-# for (i in 1:nrow(modules.regular)){
+# for (i in 1:100){
+for (i in 1:floor(nrow(modules.regular)/15)){
     modules.dataFrame <- rbind.fill(modules.dataFrame,ModuleDataPreprocessed(modules.text[i]))
+    # modules.dataFrame <- rbind.fill(modules.dataFrame,as.data.frame(modules.text[i]))
     if(round(i/20) == i/20){print(i)}
 }
 # Transform the dataframe into a JSON structure
