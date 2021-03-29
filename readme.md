@@ -1,9 +1,13 @@
-# r-einstieg
-Ein Minikurs zum Einstieg in die Arbeit mit R
+# Overall ZHAW data archives data extraction
+For this project data from four ZHAW data archives shall be extracted and analysed.
+Structure and acessibility of all four archives is different. Therefore different data harvesting merthods will be used. Each of them will be explained
+in the course of this project.
 
-Dieser Minikurs gibt einen Schnelleinstieg in die Arbeit mit R. Dabei werden die zentralen Konzepte angesprochen und kleine Übungen bereitgestellt. Der Kurs ist kein Programmierkurs.
+The four steps that I will follow in this project are: Obtaining data Preparing data, Analysing data, Validation
 
-## Für Editoren
+## Coding in R
+There are several options with regard to good software frameworks for this project. Python, Matlab and R have a large community and development support, even when it comes to text mining. I choose R. The language is very compact and many libraries allow clear and clean development.
+
 
 ### ZHAW Moodle Layouts
 
