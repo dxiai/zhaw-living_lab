@@ -18,10 +18,15 @@ Every script has the same structure.
 - Main routine
 
 **Naming conventions:** 
-- Global variable: eg. 'eventoURLsList'; concatenation of 'evento'(source specific term), URLs(value description), 'List'(type of variable). The first character of each term is written in upper letters to make the variables better readable.  
+- script names: e.g. '1_ZHAW_Evento-fetch-data.R' The first character is the number indicating the logical sequence of the scripts
+- Global variable: e.g. 'eventoURLsList'; concatenation of 'evento'(source specific term), URLs(value description), 'List'(type of variable). The first character of each term is written in upper letters to make the variables better readable.  
 - function specific variable: eg. fDataset; 'f' is the first character of each function specific variable. The names are short and because there are only used within the function often not that self-explanatory as the global variables.
 - Function name: 'evento_generate_raw_dataframe'; like the global variables, the function names are self-explanatory, but this time each term is seperated
 
+## Evento database
+To extract module and course decriptions from the Evento database I choose the webscraping approach. Function `evento_scrape_module_urls` performs this task.
+The first step is the harvesting of all modules and course related urls. This list needs to be cleaned. 
+The second step is 
 
 ## Sources
 
