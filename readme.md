@@ -18,9 +18,9 @@ Every script has the same structure.
 - Main routine
 
 **Naming conventions:** 
-- script names: e.g. `1_ZHAW_Evento-fetch-data.R` The first character is the number indicating the logical sequence of the scripts
+- Script names: e.g. `1_ZHAW_Evento-fetch-data.R` The first character is the number indicating the logical sequence of the scripts
 - Global variable: e.g. `eventoURLsList`; concatenation of `evento`(source specific term), `URLs`(value description), `List`(type of variable). The first character of each term is written in upper letters to make the variables better readable.  
-- function specific variable: eg. `fDataset`; `f` is the first character of each function specific variable. The names are short and because there are only used within the function often not that self-explanatory as the global variables.
+- Function specific variable: eg. `fDataset`; `f` is the first character of each function specific variable. The names are short and because there are only used within the function often not that self-explanatory as the global variables.
 - Function name (lowercase): `evento_generate_raw_dataframe`; like the global variables, the function names are self-explanatory, but this time each term is seperated
 - Function name(uppercase): `EVENTO_SCRAPE_MODULE_CONTENT` All uppercase means that this function can have an impact on the runtime behavior of third-party systems such as web servers and thus negatively influence the work of third parties during the required function execution time.
 
