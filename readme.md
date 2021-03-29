@@ -24,9 +24,9 @@ Every script has the same structure.
 - Function name: 'evento_generate_raw_dataframe'; like the global variables, the function names are self-explanatory, but this time each term is seperated
 
 ## Evento database
-To extract module and course decriptions from the Evento database I choose the webscraping approach. Function `evento_scrape_module_urls` performs this task.
-The first step is the harvesting of all modules and course related urls. This list needs to be cleaned. 
-The second step is 
+To extract module and course decriptions from the Evento database I choose the webscraping approach. 
+The first step is the harvesting of all modules and course related urls. Function `evento_scrape_module_urls` performs this task. The resulting list needs to be cleaned and preprocessed. This is done in the function `evento_clean_url_list`. The result of the second step is used to scrape the evento database, one url after the other in order to harvest the modules content. This time consuming and preferrably overnight batch job is coxed in function `evento_scrape_module_content`
+...
 
 ## Sources
 
