@@ -8,6 +8,17 @@ The four steps that I will follow in this project are: Obtaining data Preparing 
 ## Coding in R
 There are several options with regard to good software frameworks for this project. Python, Matlab and R have a large community and development support, even when it comes to text mining. I choose R. The language is very compact and many libraries allow clear and clean development.
 
+### Organization of the individual scripts
+Every script has the same structure.
+- General description 
+- External Libraries needed in the script
+- External Scripts written as part of the project
+- General definitions and variables
+- Local functions
+- Main routine
+
+**Naming conventions:** 
+- Global Variable: eg. 'eventoURLsList'; concatenation of 'evento'(source specific term), URLs(value description), 'List'(type of variable) 
 
 ### ZHAW Moodle Layouts
 
@@ -21,6 +32,7 @@ Das ZHAW Moodle verwendet die standard [fontawesome 4.7.0 free Icons](https://fo
 
 Ausserdem wird ein spezieller Satz von Glyphicons verwendet. Das einzige Symbol in dieser Auswahl, das sinnvoll verwendet werden kann, ist das ZHAW Logo: Z.B. `<i class="glyphicon glyphicon-zhaw"></i>`.
 
-## Lizenz
+## Sources
 
-Dieser Kurs ist unter [CC BY NC SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) lizensiert.
+For structuring, developing and documentation the following sources have been used. 
+- Warwick masterclass R text analysis paert one. "Kasper Welbers, VU University Amsterdam"
