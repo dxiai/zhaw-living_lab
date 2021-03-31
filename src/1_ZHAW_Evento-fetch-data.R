@@ -20,19 +20,13 @@
 # if (!require('rlist')) install.packages('rlist'); library(rlist)
 
 
-# Set the directory to the application path and check it
-setwd(dirname(rstudioapi::getSourceEditorContext()$path)); getwd()
-# Set the url pathes for the evento courses main page.
-eventoMainUrl <- "https://eventoweb.zhaw.ch/"
-# This page contains all document urls to be scraped!
-eventoExtension <- "EVT_Pages/SuchResultat.aspx?node=c594e3e5-cd9a-4204-9a61-de1e43ccb7b0&Tabkey=WebTab_ModuleSuchenZHAW&Print=true"
-
-
+###########################################################################
 #' Scrape the Evento module and course urls list
 #'
 #' This function scrapes the evento urls.
 #'
-#' @param eventoMainUrl,eventoExtension main evento url and its modules archive specific extension.
+#' @param eventoMainUrl,eventoExtension main evento url and
+#' its modules archive specific extension.
 #'
 #' @keywords evento,webscraping,
 #' @return The raw list of all found evento module urls
@@ -57,9 +51,8 @@ EVENTO_SCRAPE_MODULE_URLS <- function(eventoUrl){
 }
 
 
-#############
-
-#' Clean the scraped list of Evento module and course urls
+###########################################################################
+#' Clean the scraped list of Evento module and course URLs
 #'
 #' This function prepares the evento urls list for further data processing.
 #'
@@ -93,23 +86,6 @@ evento_clean_url_list <- function(eventoUrlRawDf){
     # provide the finally cleaned list of Evento URL's
     eventoUrlCleanDf %>% drop_na(value) -> eventoUrlCleanDf
 }
-
-###### Main routine part 1
-#Start the clock!
-ptm <- proc.time()
-eventoUrlRawDf <- EVENTO_SCRAPE_MODULE_URLS(paste0(eventoMainUrl,eventoExtension))
-# Stop the clock
-cat(paste("URL scraping from evento took",(proc.time() - ptm)[[3]], "secs"))
-eventoUrlCleanDf <- evento_clean_url_list(eventoUrlRawDf)
-
-# count the numbers of cleaned Evento URLs
-eventoUrlCleanDfRows = nrow(eventoUrlCleanDf)
-# initiate the dataframe containing the module/course content
-
-
-# Evento css_selectors indicating the module description section
-# css_selector1 <- "#ctl00_WebPartManager1_gwpctlModulDetail_ctlModulDetail_ctlModulDetail_edbAnlassWebAnsicht1558689slc_container"
-css_selector2 <- ".EditDialog_FormRow"
 
 
 ######### function ############################
@@ -147,15 +123,19 @@ evento_generate_content_item_key_df <- function(scrapedDatasets){
     names(fDataDict) = c("key","value")
     return(fDataDict)
 }
-###############################################
 
-###### Main routine part 2
-# name the pre-evaluated data records
-names(eventoContentDf) <- c("datum","nr", "bezeichnung","veranstalter","credits","beschreibung")
-eventoUrlCleanDf[4,]
-eventoScrapedContent = EVENTO_SCRAPE_MODULE_CONTENT(eventoUrlCleanDf[2,1])
-eventoGeneratedContentItemKeyDf = evento_generate_content_item_key_df(eventoScrapedContent)
 
+###########################################################################
+#' Extract the keys from the concateneted key value pairs of an evento dataset
+#'
+#' This function separates key and values of an evento dataset record into two
+#' distinct columns
+#' @param fItemKeyValue The concatenated key-value pair.
+#'
+#' @keywords evento_modules, evento_courses, data extraction, preprocessing
+#' @return Evento key-value pairs
+#' evento_key_value_content_labeled_df()
+#'
 # extract keys from value vectors in order to get a clean value(column 2) per key (column 1)
 evento_key_value_content_labeled_df <- function(fItemKeyValue){
     stri_trans_tolower(fItemKeyValue[,2]) %>%
@@ -165,21 +145,86 @@ evento_key_value_content_labeled_df <- function(fItemKeyValue){
     return(fItemKeyValue)
 }
 
-eventoContentDf=  data.frame(matrix(data = NA, nrow = 0, ncol = 2))
-for (i in 20001:28765){
-    # for (i in 1:nrow(eventoUrlCleanDf)){
-    eventoScrapedContent = EVENTO_SCRAPE_MODULE_CONTENT(eventoUrlCleanDf[i,1])
-    # in case of an URL without an IDAnlass
-    if(nrow(eventoScrapedContent)>0){
-        eventoGeneratedContentItemKeyDf = evento_generate_content_item_key_df(eventoScrapedContent)
-        evento_key_value_content_labeled_df(eventoGeneratedContentItemKeyDf) %>%
-                  rbind(eventoContentDf) -> eventoContentDf
-        if(round(i/1) == i/1){print(paste(i,"of",eventoUrlCleanDfRows,"records processed"))}
+
+###########################################################################
+#' WEBSCRAPE and preprocess the Evento module and its courses text
+#'
+#' This function scrapes the evento module text from the ZHAW EVENTO server,
+#' extracts the module and course relevant sections and uniform the structure
+#' where all records are in single dataframe column for further data processing.
+#'
+#' @param eventoUrlCleanDf The cleaned list of all module/course evento urls.
+#'
+#' @keywords evento_modules, evento_courses, scaping, data extraction, preprocessing
+#' @return Evento module and course content
+#' EVENTO_CONTENT_DF()
+#'
+EVENTO_CONTENT_DF <- function(eventoUrlCleanDf){
+    eventoContentDf=  data.frame(matrix(data = NA, nrow = 0, ncol = 2))
+    # Web scraping of each single module - VERY TIME CONSUMING - hours !!!
+    for (i in 1:nrow(eventoUrlCleanDf)){
+        eventoScrapedContent = EVENTO_SCRAPE_MODULE_CONTENT(eventoUrlCleanDf[i,1])
+        # in case of an URL without an IDAnlass
+        if(nrow(eventoScrapedContent)>0){
+            eventoGeneratedContentItemKeyDf = evento_generate_content_item_key_df(eventoScrapedContent)
+            evento_key_value_content_labeled_df(eventoGeneratedContentItemKeyDf) %>%
+                      rbind(eventoContentDf) -> eventoContentDf
+            if(round(i/1) == i/1){print(paste(i,"of",eventoUrlCleanDfRows,"records processed"))}
+        }
     }
 }
 
+
+#####################################################################################
+###### Main routine part 1 ##########################################################
+# Set the directory to the application path and check it
+setwd(dirname(rstudioapi::getSourceEditorContext()$path)); getwd()
+
+# to be implemented
+# Set debug mode ON/OFF. If ON, only 6 evento documents are taken to perform all functions.
+#     The several outputs are stored in a debug folder
+
+# Set the url pathes for the evento courses main page.
+eventoMainUrl <- "https://eventoweb.zhaw.ch/"
+
+# This page contains all document urls to be scraped!
+eventoExtension <- "EVT_Pages/SuchResultat.aspx?node=c594e3e5-cd9a-4204-9a61-de1e43ccb7b0&Tabkey=WebTab_ModuleSuchenZHAW&Print=true"
+
+# Start the clock!
+ptm <- proc.time()
+
+eventoUrlRawDf <- EVENTO_SCRAPE_MODULE_URLS(paste0(eventoMainUrl,eventoExtension))
+# Stop the clock
+cat(paste("URL scraping from evento took",(proc.time() - ptm)[[3]], "secs"))
+# Clean the scraped list of raw evento URLs
+eventoUrlCleanDf <- evento_clean_url_list(eventoUrlRawDf)
+# count the numbers of cleaned Evento URLs
+eventoUrlCleanDfRows = nrow(eventoUrlCleanDf)
+# Evento css_selector indicating the module description section
+css_selector2 <- ".EditDialog_FormRow"
+
+###### Main routine part 2
+# name the pre-evaluated data records
+names(eventoContentDf) <- c("datum","nr", "bezeichnung","veranstalter","credits","beschreibung")
+
+eventoUrlCleanDf[4,]
+# web scrape the evento content, based on the cleaned evento url list
+eventoScrapedContent = EVENTO_SCRAPE_MODULE_CONTENT(eventoUrlCleanDf[2,1])
+# structure the scraped content into key-value pairs
+eventoGeneratedContentItemKeyDf = evento_generate_content_item_key_df(eventoScrapedContent)
+
+######################################################################################
+
+
+
 # Save the scraped documents content into the hidee3n temp directory for the next step; text wrangling
 saveRDS(eventoContentDf, file = paste0(getwd(),"/ZHAW_Evento-content-basic-df.Rda"))
+
+
+
+
+
+
 
     # group_by_all()
     t() %>%
