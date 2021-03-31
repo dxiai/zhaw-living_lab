@@ -26,7 +26,24 @@ Every script has the same structure.
 
 ## Evento database
 Evento Webdata extaction has to be done by using webscraping. There is no API available that would support this process. That is the reason why webscraping is chosen to gather the evento modules and courses data.  
-The first step is the harvesting of all modules and course related urls. Function `evento_scrape_module_urls` performs this task. The resulting list containd not only the required urls and therefore needs to be cleaned. This is done in the function `evento_clean_url_list`. The cleaned urls list is then used to scrape the evento database, one url after the other in order to harvest the modules content. This time intense process is also computational intense and might slow down the works of others actually interacting with Evento. That the reason, why Webscraping should preferrably be done overnight. This crutual function is `EVENTO_SCRAPE_MODULE_CONTENT`
+The first step is the harvesting of all modules and course related urls. Function `evento_scrape_module_urls` performs this task. The resulting list containd not only the required urls and therefore needs to be cleaned. This is done in the function `evento_clean_url_list`. The cleaned urls list is then used to scrape the evento database, one url after the other in order to harvest the modules content. This time intense process is also computational intense and might slow down the works of others actually interacting with Evento. That the reason, why Webscraping should preferrably be done overnight. This crutual functions are `EVENTO_SCRAPE_MODULE_CONTENT`. Default a debug flag is set to `TRUE`, limiting the data scraping to 10 documents. 
+
+| index| key | value |
+|------|-----|-------|
+| 1 | diese information wurde generiert am: | 31.03.2021 |
+| 2 | nr. | a.ba.ar.ar+st4.10hs| 
+| 3 | bezeichnung | architektur- und städtebaugeschichte 4|
+| 4 | veranstalter | aa studiengang architektur |
+| 5 | credits | 2 |
+| 6 | version: | 1.0 gültig ab 01.08.2013das modul architektur- und städtebaugeschichte 4 besteht aus den beiden submodulen architekturgeschichte 4 und städtebaugeschichte 4. ]
+| 7 | nr. | a.ba.ar.ar4.10hs.g |
+| 8 | bezeichnung | architekturgeschichte 4 - gruppenunterricht |
+9
+veranstalter
+aa studiengang architektur
+10
+version:
+1.0 gültig ab 01.08.2013 lernziele die studierenden soll
 ...
 
 ## Sources
