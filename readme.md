@@ -40,6 +40,10 @@ The first step is the harvesting of all modules and course related urls. Functio
 | 8 | bezeichnung | architekturgeschichte 4 - gruppenunterricht |
 | 9 | veranstalter | aa studiengang architektur |
 | 10 | version: | 1.0 gültig ab 01.08.2013 lernziele die studierenden soll |
+| 11 | nr. | a.ba.ar.st4.10hs.g |
+| 12 | bezeichnung | städtebaugeschichte 4 - gruppenunterricht |
+| 13 | veranstalter | aa studiengang architektur |
+| 14 | version: | 1.0 gültig ab 01.08.2013 lernziele die studierenden sollen die wichtigsten städtebaulichen phänomene der nachkriegszeit in ihrem politischen, sozialen, ökonomischen und kulturellen kontext erklären. der kurs soll auch als zusammenfassung dienen, zur wiederholung der gesamten 4 semester städtebaugeschichte. lerninhalt wiederaufbau in deutschland und frankreich xxx sprawl chandigard, brasilia, dhaka, canberra um 1968 learning from las vegas/new york zürich: eine zusammenfassung |
 
 ...
 
