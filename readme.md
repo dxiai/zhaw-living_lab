@@ -35,15 +35,12 @@ The first step is the harvesting of all modules and course related urls. Functio
 | 3 | bezeichnung | architektur- und städtebaugeschichte 4|
 | 4 | veranstalter | aa studiengang architektur |
 | 5 | credits | 2 |
-| 6 | version: | 1.0 gültig ab 01.08.2013das modul architektur- und städtebaugeschichte 4 besteht aus den beiden submodulen architekturgeschichte 4 und städtebaugeschichte 4. ]
+| 6 | version: | 1.0 gültig ab 01.08.2013das modul architektur- und städtebaugeschichte 4 besteht aus den beiden submodulen architekturgeschichte 4 und städtebaugeschichte 4. |
 | 7 | nr. | a.ba.ar.ar4.10hs.g |
 | 8 | bezeichnung | architekturgeschichte 4 - gruppenunterricht |
-9
-veranstalter
-aa studiengang architektur
-10
-version:
-1.0 gültig ab 01.08.2013 lernziele die studierenden soll
+| 9 | veranstalter | aa studiengang architektur |
+| 10 | version: | 1.0 gültig ab 01.08.2013 lernziele die studierenden soll |
+
 ...
 
 ## Sources
