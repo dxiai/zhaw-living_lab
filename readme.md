@@ -28,6 +28,9 @@ Every script has the same structure.
 Evento Webdata extaction has to be done by using webscraping. There is no API available that would support this process. That is the reason why webscraping is chosen to gather the evento modules and courses data.  
 The first step is the harvesting of all modules and course related urls. Function `evento_scrape_module_urls` performs this task. The resulting list containd not only the required urls and therefore needs to be cleaned. This is done in the function `evento_clean_url_list`. The cleaned urls list is then used to scrape the evento database, one url after the other in order to harvest the modules content. This time intense process is also computational intense and might slow down the works of others actually interacting with Evento. That the reason, why Webscraping should preferrably be done overnight. This crutual functions are `EVENTO_SCRAPE_MODULE_CONTENT`. Default a debug flag is set to `TRUE`, limiting the data scraping to 10 documents. 
 
+## Data extraction and pre processing
+The scraped URL list contains 28765 single links to module descriptions. The process to scrape the evento content based on the URL list takes several hours, depending on the general evento server load. In our case this task has been done over night. The gathered datasets need to be cleaned and consolidated in a way that a next more granular data structuring process can be launched. Table xxy shows the key value pair organisation of all scraped module descriptions. The whole list is 250'533 rows long.  
+
 | index| key | value |
 |------|-----|-------|
 | 1 | diese information wurde generiert am: | 31.03.2021 |
