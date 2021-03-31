@@ -166,7 +166,7 @@ evento_key_value_content_labeled_df <- function(fItemKeyValue){
 }
 
 eventoContentDf=  data.frame(matrix(data = NA, nrow = 0, ncol = 2))
-for (i in 1:1000){
+for (i in 20001:28765){
     # for (i in 1:nrow(eventoUrlCleanDf)){
     eventoScrapedContent = EVENTO_SCRAPE_MODULE_CONTENT(eventoUrlCleanDf[i,1])
     # in case of an URL without an IDAnlass
@@ -177,6 +177,9 @@ for (i in 1:1000){
         if(round(i/1) == i/1){print(paste(i,"of",eventoUrlCleanDfRows,"records processed"))}
     }
 }
+
+# Save the scraped documents content into the hidee3n temp directory for the next step; text wrangling
+saveRDS(eventoContentDf, file = paste0(getwd(),"/ZHAW_Evento-content-basic-df.Rda"))
 
     # group_by_all()
     t() %>%
