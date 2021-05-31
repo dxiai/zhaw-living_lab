@@ -28,26 +28,53 @@ graphics.off()
 
 #>>>>>>>>>>>>>>>>>>>> Single sdg read from Excel original
 ReadSdgXlsx <- function(my.path, my.lang, my.sdgNo){
-    # debugging only
-    # my.path = data.dir; my.lang = "de"; my.sdgNo = 1
-    library(readxl)
-    my.tmp <-read_xlsx(paste0(data.dir,eval(paste0("/SDG",my.sdgNo,".xlsx"))),sheet = my.lang, na = 'NULL')[-1,paste0(my.lang,"_full")] %>%
-        # tmp <-read_xlsx(paste0(dataDir,eval(paste0("/SDG",sdgNo,".xlsx"))),sheet = lang, na = 'NULL')[2:nrow(dataset),paste0(lang,"_full")] %>%
-        as_tibble() %>%
-        # clean the column by replacing NAs to ""
-        mutate_at(c(1:1), ~replace(., is.na(.), ''))
-    # rename column 1
-    names(my.tmp) = "key"# %>%
-    # duplicate column, first key, second value -> display key as name in the wordcloud
-    my.tmp <- mutate(my.tmp,"value" = key) #%>%
-    # # create an sdg_x dictionary
-    return(dictionary(setNames(as.list(my.tmp$key), my.tmp$value)))
+    tryCatch(
+        {
+            # debugging only
+            # my.path = data.dir; my.lang = "de"; my.sdgNo = 1
+            library(readxl)
+            my.tmp <-read_xlsx(paste0(data.dir,eval(paste0("/SDG",my.sdgNo,".xlsx"))),sheet = my.lang, na = 'NULL')[-1,paste0(my.lang,"_full")] %>%
+                # tmp <-read_xlsx(paste0(dataDir,eval(paste0("/SDG",sdgNo,".xlsx"))),sheet = lang, na = 'NULL')[2:nrow(dataset),paste0(lang,"_full")] %>%
+                as_tibble() %>%
+                # clean the column by replacing NAs to ""
+                mutate_at(c(1:1), ~replace(., is.na(.), ''))
+            # rename column 1
+            names(my.tmp) = "key"# %>%
+            # duplicate column, first key, second value -> display key as name in the wordcloud
+            my.tmp <- mutate(my.tmp,"value" = key) #%>%
+        },
+        error=function(cond) {
+            # dev.off()
+            message("Here's the original error message:")
+            message(cond)
+            # Choose a return value in case of error
+            return(NA)
+        },
+        warning=function(cond) {
+            # dev.off()
+            message("Here's the original warning message:")
+            message(cond)
+            # Choose a return value in case of warning
+            return(NULL)
+        },
+        finally={
+            # NOTE:
+            # Here goes everything that should be executed at the end,
+            # regardless of success or error.
+            # If you want more than one expression to be executed, then you
+            # need to wrap them in curly brackets ({...}); otherwise you could
+            # just have written 'finally=<expression>'
+
+            # # create an sdg_x dictionary
+            return(dictionary(setNames(as.list(my.tmp$key), my.tmp$value)))
+        }
+    )
 }
 
 
 #>>>>>>>>>>>>>>>>>>>>Load preprocessed Evento dataframe into memory
 # data.file <- readRDS(file = paste0(tmp.dir,"/ZHAW_Evento_all_preprocessed.Rda"))
-data.file <- readRDS(file = paste0(getwd(),"/ZHAW_Evento_all_cleaned.Rda"))
+data.file <- readRDS(file = paste0(getwd(),"/3_ZHAW_Evento-content-cleaned.RDA"))
 # crerate the corpus
 corp = corpus(data.file,text_field = "text") # , docvars = "id")
 

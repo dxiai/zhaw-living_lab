@@ -31,6 +31,48 @@ links <- response %>% html_nodes("a")
 urls <- links %>% html_attr("href")
 courses <- links %>% html_text("href")
 
+#****************************************
+
+# gather all course content, given the url
+ url_data <- paste0(urlMain,myURL)
+ myURL = "Evt_Pages/Brn_ModulDetailAZ.aspx?node=c594e3e5-cd9a-4204-9a61-de1e43ccb7b0&IDAnlass=1558689"
+# Evento css_selectors indicating the module description section
+css_selector1 <- "#ctl00_WebPartManager1_gwpctlModulDetail_ctlModulDetail_ctlModulDetail_edbAnlassWebAnsicht1558689slc_container"
+css_selector2 <- ".EditDialog_FormRow"
+
+fDataframe =  data.frame(matrix(data = NA, nrow = 0, ncol = 6))
+names(fDataframe) <- c("datum","nr", "bezeichnung","veranstalter","credits","beschreibung")
+fDataframe.names = c("datum","nr", "bezeichnung","veranstalter","credits","beschreibung")
+names(fDataframe) <- fDataframe.names
+
+fDataset = {}
+fDataset <- read_html(paste0(urlMain,myURL)) %>%
+    html_node(css = css_selector1) %>%
+    html_nodes(css = css_selector2) %>%
+    html_text() %>%
+    as_tibble() %>%
+    filter(tolower(value) != "beschreibung") %>%
+    t() %>%
+    as_tibble()
+names(fDataset,c("datum","nr", "bezeichnung","veranstalter","credits","beschreibung"))
+
+#**********************************
+#*
+
+names(fDataframe) <- c("datum","nr", "bezeichnung","veranstalter","credits","beschreibung")
+
+# concateate id, title and text into a dataframe
+# for (i in 1:20){
+# i=1
+rowsfDataset = nrow(fDataset)
+for (i in 1:rowsDataset){
+    fDataframe[i,1] <- Evento_Module_Id(fDataset$course[i])
+    fDataframe[i,2] <- Evento_Module_Title(fDataset$course[i])
+    fDataframe[i,3] <- Evento_Module_Text(fDataset$text[i])
+    if(round(i/50) == i/50){print(paste(i,"of",rowsDataset,"records processed"))}
+}
+#*
+
 # transform the XML data into R usable raw dataframes
 dfUrls <- as.data.frame((urls))
 dfCourses <- as.data.frame((courses))
@@ -51,7 +93,4 @@ mydf <- subset(mydd,courses !="") %>%
 # Store the digital collection as dataframe into the application directory
 saveRDS(mydf[1:nrow(mydf),], file = paste0(getwd(),"/1_ZHAW_Evento-fetched-urls.Rda"))
 
-#### DEBUG only #####
-#Crosscheck the saved output
-# Load the above generated Evento dataframe into memory
-evento_urls <- readRDS(file = paste0(getwd(),"/1_ZHAW_Evento-fetched-urls.Rda"))
+

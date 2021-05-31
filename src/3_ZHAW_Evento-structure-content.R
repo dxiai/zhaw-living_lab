@@ -24,9 +24,9 @@ source(paste0(getwd(),"/library_sustainability.R"))
 
 
 #### input file name, has to be of type RDA  #Generation of this file to be checked!!!!! 270321
-inputFile = "1_ZHAW_Evento-docs-content.Rda"
+inputFile = "A2_ZHAW_Evento-scraped-content.Rda"
 #### input file name, has to be of type RDA
-outputFile = "3_ZHAW_Evento-structured-content.Rda"
+outputFile = "A3_ZHAW_Evento-structured-content.Rda"
 
 
 ######### Main routine

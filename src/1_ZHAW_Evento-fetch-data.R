@@ -10,16 +10,6 @@
 #' | Error      | internally handled
 
 
-
-# Load all required libraries and if not yet installed, install them
-# if (!require('tidyverse')) install.packages('tidyverse'); library(tidyverse)
-# if (!require('rvest')) install.packages('rvest'); library(rvest)
-# if (!require('qpcR')) install.packages('qpcR'); library(qpcR)
-# if (!require('XML')) install.packages('XML'); library(XML)
-# if (!require('svMisc')) install.packages('svMisc'); library(svMisc)
-# if (!require('rlist')) install.packages('rlist'); library(rlist)
-
-
 ###########################################################################
 #' Scrape the Evento module and course urls list
 #'
@@ -75,7 +65,7 @@ evento_clean_url_list <- function(eventoUrlRawDf){
         if(stri_detect_regex(fUrlItem,"^\\.{2}") == T){
             eventoUrlCleanDf[i,1] = paste0(eventoMainUrl,fUrlItem)
             if(stri_detect_regex(fUrlItem,"^javascript") == F){
-                eventoUrlCleanDf[i,1] = paste0(eventoMainURL,fUrlItem)
+                eventoUrlCleanDf[i,1] = paste0(eventoMainUrl,fUrlItem)
             }
         }
         if(round(i/500) == i/500){print(paste(i,"of",eventoUrlRawDfRows,"records processed"))}
@@ -89,7 +79,7 @@ evento_clean_url_list <- function(eventoUrlRawDf){
 
 
 ######### function ############################
-EVENTO_SCRAPE_MODULE_CONTENT <- function(myURL){
+evento_extract_module_content <- function(myURL){
     # myURL = "https://eventoweb.zhaw.ch/Evt_Pages/Brn_ModulDetailAZ.aspx?node=c594e3e5-cd9a-4204-9a61-de1e43ccb7b0&IDAnlass=619066"
     # myURL = dfUrlsCleaned[1,1]
     fDataset = {}
@@ -104,22 +94,22 @@ EVENTO_SCRAPE_MODULE_CONTENT <- function(myURL){
 ###############################################
 
 ######### function ############################
-evento_generate_content_item_key_df <- function(scrapedDatasets){
-    scrapedDatasets = eventoScrapedContent
+evento_generate_content_item_key_df <- function(fscrapedDatasets){
+    # scrapedDatasets = eventoScrapedContent
     # extract the labels from the gathered dataset
     fDataDict = {}
     fKeyList = {}
     fKey =  data.frame(matrix(data = NA, nrow = 0, ncol = 1))
     fKeyList = c("diese information wurde generiert am:","datum","modul-nr.bezeichnung","nr.", "bezeichnung","veranstalter","credits","version:")
-    for (i in 1:nrow(scrapedDatasets)){
-        q <- tolower(scrapedDatasets[i,]) %>% stri_detect_regex(fKeyList)
+    for (i in 1:nrow(fscrapedDatasets)){
+        q <- tolower(fscrapedDatasets[i,]) %>% stri_detect_regex(fKeyList)
         if(length(fKeyList[q])>0){
             fKey[i,1] = fKeyList[q][[1]]
         } else{
             fKey[i,1] = NA
         }
     }
-    fDataDict <- fKey %>% mutate(scrapedDatasets,)
+    fDataDict <- fKey %>% mutate(fscrapedDatasets,)
     names(fDataDict) = c("key","value")
     return(fDataDict)
 }
@@ -159,19 +149,23 @@ evento_key_value_content_labeled_df <- function(fItemKeyValue){
 #' @return Evento module and course content
 #' EVENTO_CONTENT_DF()
 #'
-EVENTO_CONTENT_DF <- function(eventoUrlCleanDf){
-    eventoContentDf=  data.frame(matrix(data = NA, nrow = 0, ncol = 2))
+EVENTO_SCRAPE_MODULE_CONTENT <- function(feventoUrlCleanD, fdebug = T){
+    feventoContentDf=  data.frame(matrix(data = NA, nrow = 0, ncol = 2))
+    feventoUrlCleanDfRows = nrow(feventoUrlCleanDf)
     # Web scraping of each single module - VERY TIME CONSUMING - hours !!!
-    for (i in 1:nrow(eventoUrlCleanDf)){
-        eventoScrapedContent = EVENTO_SCRAPE_MODULE_CONTENT(eventoUrlCleanDf[i,1])
+    # upperLimit = 1
+    if(fdebug==T){upperLimit =10}else{ upperLimit =nrow(eventoUrlCleanDf)}
+    for (i in 1:upperLimit){
+        feventoScrapedContent = evento_extract_module_content(feventoUrlCleanDf[i,1])
         # in case of an URL without an IDAnlass
-        if(nrow(eventoScrapedContent)>0){
-            eventoGeneratedContentItemKeyDf = evento_generate_content_item_key_df(eventoScrapedContent)
-            evento_key_value_content_labeled_df(eventoGeneratedContentItemKeyDf) %>%
-                      rbind(eventoContentDf) -> eventoContentDf
-            if(round(i/1) == i/1){print(paste(i,"of",eventoUrlCleanDfRows,"records processed"))}
+        if(nrow(feventoScrapedContent)>0){
+            feventoGeneratedContentItemKeyDf = evento_generate_content_item_key_df(feventoScrapedContent)
+            evento_key_value_content_labeled_df(feventoGeneratedContentItemKeyDf) %>%
+                      rbind(feventoContentDf) -> feventoContentDf
+            if(round(i/1) == i/1){print(paste(i,"of",feventoUrlCleanDfRows,"records processed"))}
         }
     }
+    return(feventoContentDf)
 }
 
 
@@ -190,38 +184,40 @@ eventoMainUrl <- "https://eventoweb.zhaw.ch/"
 # This page contains all document urls to be scraped!
 eventoExtension <- "EVT_Pages/SuchResultat.aspx?node=c594e3e5-cd9a-4204-9a61-de1e43ccb7b0&Tabkey=WebTab_ModuleSuchenZHAW&Print=true"
 
-# Start the clock!
-ptm <- proc.time()
 
+# Evento url extraction usually takes about 70 sec.
+ptm <- proc.time() # Start the clock!
 eventoUrlRawDf <- EVENTO_SCRAPE_MODULE_URLS(paste0(eventoMainUrl,eventoExtension))
-# Stop the clock
-cat(paste("URL scraping from evento took",(proc.time() - ptm)[[3]], "secs"))
+cat(paste("URL scraping from evento took",(proc.time() - ptm)[[3]], "secs")) # Stop the clock
+
 # Clean the scraped list of raw evento URLs
+ptm <- proc.time() # Start the clock!
 eventoUrlCleanDf <- evento_clean_url_list(eventoUrlRawDf)
+cat(paste("URL scraping from evento took",(proc.time() - ptm)[[3]], "secs")) # Stop the clock
+
 # count the numbers of cleaned Evento URLs
 eventoUrlCleanDfRows = nrow(eventoUrlCleanDf)
+
 # Evento css_selector indicating the module description section
 css_selector2 <- ".EditDialog_FormRow"
 
-###### Main routine part 2
-# name the pre-evaluated data records
-names(eventoContentDf) <- c("datum","nr", "bezeichnung","veranstalter","credits","beschreibung")
-
-eventoUrlCleanDf[4,]
 # web scrape the evento content, based on the cleaned evento url list
-eventoScrapedContent = EVENTO_SCRAPE_MODULE_CONTENT(eventoUrlCleanDf[2,1])
-# structure the scraped content into key-value pairs
-eventoGeneratedContentItemKeyDf = evento_generate_content_item_key_df(eventoScrapedContent)
+# IN order to scrape THE WHOLE EVENTO DATABASE set 'fdebug' to FALSE
+eventoScrapedModuleContent = EVENTO_SCRAPE_MODULE_CONTENT(eventoUrlCleanDf, fdebug = TRUE)
 
+######################################################################################
+# Save the scraped documents content into the hidee3n temp directory for the next step; text wrangling
+# saveRDS(eventoScrapedModuleContent, file = paste0(getwd(),"/ZHAW_Evento-content-basic-df.Rda"))
+eventoScrapedModuleContent2 <- readRDS(file = paste0(getwd(),"/ZHAW_Evento-content-basic-df.Rda"))
+######################################################################################
+
+saveRDS(eventoScrapedModuleContent, file = paste0(getwd(),"/ZHAW_Evento-content-basic-df-DEBUG.Rda"))
+eventoScrapedModuleContent <- readRDS(file = paste0(getwd(),"/ZHAW_Evento-content-basic-df-DEBUG.Rda"))
 ######################################################################################
 
 
-
-# Save the scraped documents content into the hidee3n temp directory for the next step; text wrangling
-saveRDS(eventoContentDf, file = paste0(getwd(),"/ZHAW_Evento-content-basic-df.Rda"))
-
-
-
+# name the pre-evaluated data records
+names(eventoContentDf) <- c("datum","nr", "bezeichnung","veranstalter","credits","beschreibung")
 
 
 
