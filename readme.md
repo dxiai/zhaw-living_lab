@@ -24,15 +24,14 @@ Konzepte, Methoden und bereits umgesetzte Komponenten aus MultiMico werden zur E
 
 ### Living_lab Location
 Der physische Living Lab Raum befindet sich im Raum 217 im ZHAW, Campus Reidbach, Gebäude RA. Der aktuelle Stand Plazierung und Anschluss der aktuell sichtbaren Aktuatoren:
-pictures||
--|-|
-![screens_unpacked](/assets/images/dyson_humidifier.jpg)
-![screens_unpacked](/assets/images/screens_unpacked.jpeg)| ![dyson_philips](/assets/images/dyson_philips.jpeg)
+Screens| Dyson_Philips| Humidifier_Philips|
+-|-|-
+![screens_unpacked](/assets/images/screens_unpacked.jpg)| ![dyson_philips](/assets/images/dyson_philips.jpg)| ![dyson_philips](/assets/images/humidifier_philips.jpg)
 
 ### IT-Infrastruktur
 Die IT-Infrastruktur setzt sich aus Daten- Verarbeitung und - Kommunkation Systemen, Sensoren und Aktuatoren zusammen. Die folgende tabellarische Aufstellung zeigt die zur Verfügung stehenden Geräte und Systemkomponenten.
 
-![IoT_inventory](/assets/images/IoT_inventory.jpeg)
+![IoT_inventory](/assets/images/IoT_inventory.jpg)
 
 Daten- Verarbeitung und - Kommunkation:
 Menge|Artikel|Details|Einsatz
