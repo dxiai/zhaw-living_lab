@@ -134,7 +134,24 @@ iSmart Alarm (nur Sicherheits-System)| [Homee (multikompatible Zentrale)](https:
 [SMART HOME by hornbach](https://www.homeandsmart.de/hornbach-smart-home-test)| Somfy TaHoma | Zipato Zipatile
 
 
-Die Suche nach "Open Source Home Automation App Design" tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/)
+Die Suche nach "Open Source Home Automation App Design" tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/) Da die 16 gelisteten Plattformen auf ubidots bereits kurz und prägnant beschrieben sind und zu jeder Plattform weiterführende Links vorhanden sind, verzichte ich hier auf eine beschreibung meinerseits. Ich habe die 16 Plattformen durch gesehen und nach diesen tabellarisch dargestellten Kriterien bewertet.
 
-
+Nr.| Produkt| Plattformen| Zielgruppe| Komplexität| unterstützte Sensoren/Aktuatoren| EntwicklerKit  
+1. openHab
+2. Home Assistant
+3. OpenMotics
+4. Jeedom
+5. ioBroker
+6. AGO Control
+7. Domoticz
+8. FHEM
+9. Calaos
+10. Pimatic
+11. Homebridge.io
+12. Smarthomatic
+13. EvenGhost
+14. MyController
+15. PiDome
+16. HomeGenie
+17. ubidots
 
