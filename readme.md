@@ -52,7 +52,7 @@ Menge|Artikel|Details|Einsatz
 3| Raspberry Pi Kühlgehäuse Pi4| schwarz| Daten- Verarbeitung und - Kommunkation
 3| Grove Raspberry Pi Shield| Base HAT| Daten- Verarbeitung und - Kommunkation
 
-
+### Vorgehen
 In einem ersten Schritt soll eine Machbarkeitsstudie in Form eines Demonstrators entwickelt werden, der:
 
 - die für die Machbarkeitsstudie gewählten technischen Komponenten bzw. Massnahmen durch eine IT-basierte Lösung steuert
@@ -63,3 +63,24 @@ In einem ersten Schritt soll eine Machbarkeitsstudie in Form eines Demonstrators
 - die erfassten Daten der einzelnen Systemkomponenten hinsichtlich Datenerhebung, und -austausch vernetzt und via API zugänglich macht.
 
 Die «physisch-technische» Vernetzung (z.B. Elektronik) ist nicht Gegenstand dieses Anschubprojektes.
+
+Für den Demonstrator entscheiden wir uns für die Erfassung der Raumparameter Temperatur, Feuchtigkeit, Licht, Geräusch. Eine IP Kamera ergänzt die so erfassten Raumdaten durch einen optischen Sensor, über den sich zusätzliche visuelle Informationen zu den Raumverhältnissen gewinnen lassen. Die Raumparameter werden entweder voll programmgesteuert, semi-automatisch oder sind manuell veränderbar.
+
+### System Anforderungen
+** Gesamtsystem **
+- Daten Repository
+- Techn. Kommunikation
+- Verfügbarkeit
+- Kontrolle/Einflussname
+
+** Lokal **
+- Sensoring
+- Microcomputing
+- Edge-Computing
+
+** Remote **
+- Datenzugriff
+- Aktuatorensteuerung
+- Profilierung
+- Kommunikationsplattformen
+
