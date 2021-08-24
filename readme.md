@@ -11,18 +11,25 @@ Dazu ist eine Vernetzung und Ansteuerbarkeit der einzelnen Komponenten mit ihren
 Die «physisch-technische» Vernetzung (z.B. Elektronik) ist nicht Gegenstand dieses Anschubprojektes. (2020, Carsten Druhmann)
 
 # Methode
-Das dxiai Projekt **MultiMico** unter Leitung von Christian Glahn beinhaltet die Beantwortung folgender Forschungsfrage: 
+## Ausgangslage
+### Projekt MultiMico
+Das dxiai Projekt MultiMico unter Leitung von Dr. Christian Glahn beinhaltet die Beantwortung folgender Forschungsfrage: 
 > Der aktuelle Stand der Forschung zeigt eine grosse Lücke in Bereich der Gestaltung und dem Arrangement von bestehenden Informationssystemen zu multimodalen 
 Systemen für konkrete Prozesse und Anwendungen.
 Daraus ergibt sich direkt die zentrale Forschungsfrage für dieses Projekt:
 **Welche Gestaltungselemente und Daten strukturieren multimodale Interaktionen und können zur Prozesssteuerung in heterogenen Geräteumgebungen genutzt werden?**
-Diese Frage greift die aktuelle Entwicklung der Kapselung und Skalierung von Ressourcen im Cloud-Computing auf und richtet den Fokus auf die Interaktion im sogenannten Edge-ComputingUmgebungen, in denen Smartphones, PCs und Tablets im Verbund mit anderen Komponenten komplexe «Erlebnisräume» schaffen, was sowohl im aktuellen Diskurs und in der technischen Anwendung unterrepräsentiert ist.
+Diese Frage greift die aktuelle Entwicklung der Kapselung und Skalierung von Ressourcen im Cloud-Computing auf und richtet den Fokus auf die Interaktion im sogenannten Edge-ComputingUmgebungen, in denen Smartphones, PCs und Tablets im Verbund mit anderen Komponenten komplexe «Erlebnisräume» schaffen, was sowohl im aktuellen Diskurs und in der technischen Anwendung unterrepräsentiert ist. (2020, Christian Glahn)
 
 Konzepte, Methoden und bereits umgesetzte Komponenten aus MultiMico werden zur Erreichnung der Living Lab Projektziele unterstützend eingesetzt. 
-Der erste Schritt gilt einer Bestandesaufname von Raum und potentiell eingesetzter Technologie. Bereits zu Projektbeginn wurde ein physischer Living Lab Raum definiert; ZHAW, Campus Reidbach, Gebäude RA, Raum 2xx. (FOTO Panorama) und IT-Infrastruktur beschafft. 
+
+### Living_lab Location
+Der physische Living Lab Raum befindet sich im Raum 217 im ZHAW, Campus Reidbach, Gebäude RA.
+(FOTO Panorama)
+
+### IT-Infrastruktur
+Die IT-Infrastruktur setzt sich aus Daten- Verarbeitung und - Kommunkation Systemen, Sensoren und Aktuatoren zusammen. Die folgende tabellarische Aufstellung zeigt die zur Verfügung stehenden Geräte und Systemkomponenten.
 
 ![IoT_inventory](/assets/images/IoT_inventory.jpeg)
-
 
 Daten- Verarbeitung und - Kommunkation:
 Menge|Artikel|Details|Einsatz
@@ -44,4 +51,15 @@ Menge|Artikel|Details|Einsatz
 3| Grove HCHO-Sensor7 WSP2110| Sensor
 3| Raspberry Pi Kühlgehäuse Pi4| schwarz| Daten- Verarbeitung und - Kommunkation
 3| Grove Raspberry Pi Shield| Base HAT| Daten- Verarbeitung und - Kommunkation
-Auktuatorik:
+
+
+In einem ersten Schritt soll eine Machbarkeitsstudie in Form eines Demonstrators entwickelt werden, der:
+
+- die für die Machbarkeitsstudie gewählten technischen Komponenten bzw. Massnahmen durch eine IT-basierte Lösung steuert
+- die Eigenschaften des Raums mit den verschiedenen Kollaborationsprozessen abstimmt
+- die Daten über verschiedene Sensoren im Raum sammelt und ausgewertet
+- mit den einzelnen Komponenten mit ihren verschiedenen Protokollen transparent kommuniziert
+- individuelle Datenprofile und Nutzerprofile erlaubt
+- die erfassten Daten der einzelnen Systemkomponenten hinsichtlich Datenerhebung, und -austausch vernetzt und via API zugänglich macht.
+
+Die «physisch-technische» Vernetzung (z.B. Elektronik) ist nicht Gegenstand dieses Anschubprojektes.
