@@ -19,7 +19,11 @@ Daraus ergibt sich direkt die zentrale Forschungsfrage für dieses Projekt:
 Diese Frage greift die aktuelle Entwicklung der Kapselung und Skalierung von Ressourcen im Cloud-Computing auf und richtet den Fokus auf die Interaktion im sogenannten Edge-ComputingUmgebungen, in denen Smartphones, PCs und Tablets im Verbund mit anderen Komponenten komplexe «Erlebnisräume» schaffen, was sowohl im aktuellen Diskurs und in der technischen Anwendung unterrepräsentiert ist.
 
 Konzepte, Methoden und bereits umgesetzte Komponenten aus MultiMico werden zur Erreichnung der Living Lab Projektziele unterstützend eingesetzt. 
-Der erste Schritt gilt einer Bestandesaufname von Raum und potentiell eingesetzter Technologie. Bereits zu Projektbeginn wurde ein physischer Living Lab Raum definiert; ZHAW, Campus Reidbach, Gebäude RA, Raum 2xx. (FOTO Panorama) und IT-Infrastruktur beschafft. Diese teilt sich in die Klassen auf:
+Der erste Schritt gilt einer Bestandesaufname von Raum und potentiell eingesetzter Technologie. Bereits zu Projektbeginn wurde ein physischer Living Lab Raum definiert; ZHAW, Campus Reidbach, Gebäude RA, Raum 2xx. (FOTO Panorama) und IT-Infrastruktur beschafft. 
+
+![git remote](/assets/images/IoT_inventory.jpeg)
+
+Diese teilt sich in die Kategorien auf:
 
 Daten- Verarbeitung und - Kommunkation:
 
