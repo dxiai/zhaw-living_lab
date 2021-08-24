@@ -134,24 +134,25 @@ iSmart Alarm (nur Sicherheits-System)| [Homee (multikompatible Zentrale)](https:
 [SMART HOME by hornbach](https://www.homeandsmart.de/hornbach-smart-home-test)| Somfy TaHoma | Zipato Zipatile
 
 
-Die Suche nach "Open Source Home Automation App Design" tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/) Da die 16 gelisteten Plattformen auf ubidots bereits kurz und prägnant beschrieben sind und zu jeder Plattform weiterführende Links vorhanden sind, verzichte ich hier auf eine beschreibung meinerseits. Ich habe die 16 Plattformen durch gesehen und nach diesen tabellarisch dargestellten Kriterien bewertet.
+Die Suche nach "Open Source Home Automation App Design" tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/) Da die 16 gelisteten Plattformen auf ubidots bereits kurz und prägnant beschrieben sind und zu jeder Plattform weiterführende Links vorhanden sind, verzichte ich hier auf eine beschreibung meinerseits. Ich habe die 16 Plattformen durch gesehen und nach diesen tabellarisch dargestellten Kriterien bewertet. Unterstützung von Linux, Mac und Windows, Open Source, grosse andf aktive Entwickler Community, Cloud Runtime Unabhängigkeit, effizientes und gut strukturiertes Entwicklerkit, starek und gut dokumentierte API, grosse Anzahl untertützter Sensoren und Mobile App Support. 
 
-Nr.| Produkt| Plattformen| Zielgruppe| Komplexität| unterstützte Sensoren/Aktuatoren| EntwicklerKit  
-1. openHab
-2. Home Assistant
-3. OpenMotics
-4. Jeedom
-5. ioBroker
-6. AGO Control
-7. Domoticz
-8. FHEM
-9. Calaos
-10. Pimatic
-11. Homebridge.io
-12. Smarthomatic
-13. EvenGhost
-14. MyController
-15. PiDome
-16. HomeGenie
-17. ubidots
+Nr.| Produkt| Plattformen| Open Source| Community| Cloud Dependency| Komplexität| unterstützte Sensoren/Aktuatoren| Mobile App
+-|-|-|-|-|-|-|-
+1. openHab| Linux, Mac, Win, Docker| yes| 33'000| nein/Intranet of Things| adv. Developers| > 1500| 
+2. Home Assistant|
+3. OpenMotics|
+4. Jeedom|
+5. ioBroker|
+6. AGO Control|
+7. Domoticz|
+8. FHEM|
+9. Calaos|
+10. Pimatic|
+11. Homebridge.io|
+12. Smarthomatic|
+13. EvenGhost|
+14. MyController|
+15. PiDome|
+16. HomeGenie|
+17. ubidots|
 
