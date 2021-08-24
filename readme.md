@@ -27,7 +27,7 @@ Diese teilt sich in die Kategorien auf:
 
 Daten- Verarbeitung und - Kommunkation:
 Menge|Artikel|Details|Einsatz
--|-
+-|-|-
 2|Raspberry Pi| 4B 4 GB|Daten- Verarbeitung und - Kommunkation
 
 2|Grove Sonnenlicht-Sensor|v1.0, SI1145|Sensorik
