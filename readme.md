@@ -26,6 +26,9 @@ Der erste Schritt gilt einer Bestandesaufname von Raum und potentiell eingesetzt
 Diese teilt sich in die Kategorien auf:
 
 Daten- Verarbeitung und - Kommunkation:
+Menge|Bezeichnung
+-|-
+2|Raspberry Pi 4B 4 GB
 
 Sensorik:
 
