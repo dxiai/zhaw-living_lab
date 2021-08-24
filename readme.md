@@ -153,7 +153,7 @@ Support möglichst vieler sprachen|starke und gut dokumentierte API, die eine na
 grosse Anzahl untertützter Sensoren und Mobile App Support
 
 openHab erfüllt alle Kriterien und stellt mit openHab 3.0 eine für unser Projekt sehr flexible und skalierbare Version zur Verfügung. 
-Die Auswertung ergab: Unterstützung der Betriebssysteme Linux, Mac, Win; Containeriserung mit Docker; grosse Entwicklergemeinde: 33'000; Lauffähig im Inter- und Intranet; Scripting mit Python, Javascript, Groovy oder Rule DSL; mittlere Entwicklungskomplexität, mehrsprachig und PlugIns für über 1'5000 Sensoren und Aktuatoren.
+Die Auswertung ergab: Unterstützung der Betriebssysteme Linux, Mac, Win; Containeriserung mit Docker; grosse Entwicklergemeinde: 33'000; Lauffähig im Inter- und Intranet; Scripting mit Python, Javascript, Groovy oder Rule DSL; mittlere Entwicklungskomplexität, PlugIns für über 1'5000 Sensoren und Aktuatoren und aktuell werden 45 Sprachen unterstützt. Unter anderen auch Chinesisch, Arabisch Russisch und Hindi, was dem internationalen Studierenden Profil der ZHAW zu gute kommt.
 
 Ein zweiter interessanter Kandidat für das Living_Lab Projekt ist iBroker.
 ...
