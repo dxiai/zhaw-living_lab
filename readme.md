@@ -151,7 +151,7 @@ Unterstützung von Linux, Mac und Windows| Open Source, grosse und aktive Entwic
 Cloud Runtime Unabhängigkeit, effizientes und gut strukturiertes Entwicklerkit| starke und gut dokumentierte API, die eine nahtlose Zusammenarbeit mit dem ZHAW MultiMico Projekt zulässt
 grosse Anzahl untertützter Sensoren und Mobile App Support
 
-openHab erfüllte alle Kriterien und legt mit openHab 3.0 eine für unser Projekt sehr flexible und skalierbare Entwicklerplattform zur Verfügung. die Auswertung ergab: Untersützung der Betriebssysteme Linux, Mac, Win. Containeriserung mit Docker; grosse Entwicklergemeinde: 33'000;: Interö und Intanet fähig; mittlere Entwicklungskomplexität und PlugIns für über 1'5000 Sensoren und Aktuatoren.
+openHab erfüllte alle Kriterien und legt mit openHab 3.0 eine für unser Projekt sehr flexible und skalierbare Entwicklerplattform zur Verfügung. die Auswertung ergab: Untersützung der Betriebssysteme Linux, Mac, Win. Containeriserung mit Docker; grosse Entwicklergemeinde: 33'000;: Internet und Intranet; mittlere Entwicklungskomplexität und PlugIns für über 1'5000 Sensoren und Aktuatoren.
 
 Ein zweiter interessanter Kandidat für das Living_Lab Projekt ist iBroker.
 ...
