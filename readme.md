@@ -148,10 +148,12 @@ Die auf ubidots verfügbaren Beschreibungen und Links zu diesen Produkten wurden
 Kriterien|-
 -|-
 Unterstützung von Linux, Mac und Windows| Open Source, grosse und aktive Entwickler Community
-Cloud Runtime Unabhängigkeit, effizientes und gut strukturiertes Entwicklerkit| starke und gut dokumentierte API, die eine nahtlose Zusammenarbeit mit dem ZHAW MultiMico Projekt zulässt
+Cloud Runtime Unabhängigkeit, effizientes und gut strukturiertes Entwicklerkit| Programmiersprachen: Javascript, Python, Node.js
+Support möglichst vieler sprachen|starke und gut dokumentierte API, die eine nahtlose Zusammenarbeit mit dem ZHAW MultiMico Projekt zulässt
 grosse Anzahl untertützter Sensoren und Mobile App Support
 
-openHab erfüllte alle Kriterien und legt mit openHab 3.0 eine für unser Projekt sehr flexible und skalierbare Entwicklerplattform zur Verfügung. die Auswertung ergab: Untersützung der Betriebssysteme Linux, Mac, Win. Containeriserung mit Docker; grosse Entwicklergemeinde: 33'000;: Internet und Intranet; mittlere Entwicklungskomplexität und PlugIns für über 1'5000 Sensoren und Aktuatoren.
+openHab erfüllt alle Kriterien und stellt mit openHab 3.0 eine für unser Projekt sehr flexible und skalierbare Version zur Verfügung. 
+Die Auswertung ergab: Unterstützung der Betriebssysteme Linux, Mac, Win; Containeriserung mit Docker; grosse Entwicklergemeinde: 33'000; Lauffähig im Inter- und Intranet; Scripting mit Python, Javascript, Groovy oder Rule DSL; mittlere Entwicklungskomplexität, mehrsprachig und PlugIns für über 1'5000 Sensoren und Aktuatoren.
 
 Ein zweiter interessanter Kandidat für das Living_Lab Projekt ist iBroker.
 ...
