@@ -110,6 +110,6 @@ Smart Home System Anbieter |||
 [Eve Systems](https://www.homeandsmart.de/elgato-eve-homekit-sensoren-smart-home-siri-steuerung)| [Egardia Smart Home](https://www.homeandsmart.de/egardia-funk-alarmanlage-all-in-one)| [GARDENA (nur Garten-System)](https://www.homeandsmart.de/gardena-smart-system-smart-garden)
 [Gigaset elements System (nur Sicherheits-System)](https://www.homeandsmart.de/gigaset-elements-smart-home-system-sensoren)| [HomeMatic IP System](https://www.homeandsmart.de/homematic-ip-eq-3-hausautomation)| [innogy Smart Home-System](https://www.homeandsmart.de/innogy-smarthome)
 iSmart Alarm (nur Sicherheits-System)| [Homee (multikompatible Zentrale)](https://www.homeandsmart.de/homee-verbindet-smart-home-geraete-mit-homkit)| [Loxone](https://www.homeandsmart.de/loxone-smart-home) 
-[Mydlink Home](https://www.homeandsmart.de/mydlink-home-smart-home-system)| QIVICON System| Rademacher
-Samsung SmartThings| Schellenberg| Schwaiger Home4You (multikompatible Zentrale)
-SMART HOME by hornbach| Somfy TaHoma | Zipato Zipatile
+[Mydlink Home](https://www.homeandsmart.de/mydlink-home-smart-home-system)| [QIVICON System](https://www.homeandsmart.de/qivicon-smart-home-plattform)| [Rademacher](https://www.homeandsmart.de/rademacher-smart-home-system-test)
+[Samsung SmartThings](https://www.homeandsmart.de/samsung-smartthings-kompatible-geraete)| [Schellenberg](https://www.homeandsmart.de/schellenberg-smart-home-system)| Schwaiger Home4You (multikompatible Zentrale)
+[SMART HOME by hornbach](https://www.homeandsmart.de/hornbach-smart-home-test)| Somfy TaHoma | Zipato Zipatile
