@@ -102,9 +102,9 @@ Z-Wave, WLAN, - ZigBree, - KNX-RF/PL/TP (für Radio Frequency, also Funk, Power 
 Mittlerweile ist Home Automation kein Nischenthema mehr, sondern hat sich zu einer veritablen Indutrie mit unzähligen Anwendungsmöglichkeiten entwickelt.
 Die Neuentwicklung eines kompletten Ecosystems macht deshlab keinen Sinn. Aus Sicht einer Bildungsinstitution wie der ZHAW sind **offene Systeme** mit einem Open Standard, verfügbarer API, grosser und breit gefächerter Entwicklergemeinschaft sowie eine Vielzahl unterschiedlicher Anwendungen wichtiger als hochoptimierte, oft komplex zu bedienende und teure **geschlossene Systeme**. Zudem können bei den offenen Systemen Sensoren und Aktuatoren unterschiedlicher Hersteller eingesetzt werden, während sich die Anzahl bei geschlossenen Systemen auf die eines Herstellers und seines Partnernetzuwerkes beschränkt.
 [Home&Smart.de](https://www.homeandsmart.de/smart-home-systeme-vergleich) bietet einen umfassenden Vergleich von 2021 erhältlichen Home Automation Anbietern, Plattformen sowie Sensoren und Aktuatoren. Über die folgende Liste kommt man zu einer Kurzbeschreibung und -Redaktionsbewertung der vorgestellten SmartHome System Anbieter.
-Welche Smart Home System Anbieter gibt es?|||
+Smart Home System Anbieter |||
 -|-|-
-AVM FRITZ! Smart Home-System| Belkin WeMo System| Bosch Smart Home-System
+[AVM FRITZ! Smart Home-System](https://www.homeandsmart.de/fritz-box-smart-home)| [Belkin WeMo System](https://www.homeandsmart.de/belkin-wemo)| [Bosch Smart Home-System](https://www.homeandsmart.de/bosch-smart-home-system-controller)
 Brennenstuhl / BrematicPRO| Busch Jäger| devolo Home Control System
 eNet SMART HOME| Digitalstrom| Eberle Wiser
 Eve Systems| Egardia Smart Home| GARDENA (nur Garten-System)
