@@ -90,9 +90,9 @@ Für den Demonstrator entscheiden wir uns für die Erfassung der Raumparameter T
 - Profilierung
 - Übertragungsmedien
 
-Ein Überblick über die gebräuchlichsten Homeautomation Standards, Medien und Systeme
+Ein Überblick über die gebräuchlichsten Homeautomation Standards, Medien und Systeme *Quelle:*[hausinfo.ch](https://hausinfo.ch/de/bauen-renovieren/haustechnik-vernetzung/smart-home-verkabelung-gebaeudeautomationen/systeme.html)
 
-**Kommunikationsstandard|	Übertragungsmedium|	Smart-Home-Systeme** *Quelle:[hausinfo.ch](https://hausinfo.ch/de/bauen-renovieren/haustechnik-vernetzung/smart-home-verkabelung-gebaeudeautomationen/systeme.html)*
+**Kommunikationsstandard**|	**Übertragungsmedium**|	**Smart-Home-Systeme** 
 -|-|-
 Definiert Form und Struktur der Signalübertragung| Bildet den physikalischen Weg der Datenübertragung| Liefern die für die Übertragung notwendige Infrastruktur| 
 Z-Wave, WLAN, - ZigBree, - KNX-RF/PL/TP (für Radio Frequency, also Funk, Power Line, Twisted Pair), - Bluetooth, - DECT, - HomeMatic| Funk (868 Mega-Hertz, 2,4 Giga-Hertz oder andere Frequenzen), - Power Line (PL, Übertragung über das Stromnetzkabel), - Datenleitung mit Glasfasern (FTTH: Fiber to the Home) oder Kupferkabeln (TP, Twisted Pair)| HomeKit von Apple läuft mit WLAN, - DigitalSTROM ist zugleich eigener Standard und nutzt Power Line. - Devolo arbeitet mit dem Z-Wave., - Qivicon ist mit HomeMatic kompatibel, - INNOXEL läuft über den CAN-Bus
