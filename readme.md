@@ -67,20 +67,27 @@ Die «physisch-technische» Vernetzung (z.B. Elektronik) ist nicht Gegenstand di
 Für den Demonstrator entscheiden wir uns für die Erfassung der Raumparameter Temperatur, Feuchtigkeit, Licht, Geräusch. Eine IP Kamera ergänzt die so erfassten Raumdaten durch einen optischen Sensor, über den sich zusätzliche visuelle Informationen zu den Raumverhältnissen gewinnen lassen. Die Raumparameter werden entweder voll programmgesteuert, semi-automatisch oder sind manuell veränderbar.
 
 ### System Anforderungen
-** Gesamtsystem **
+**Gesamtsystem**
 - Daten Repository
 - Techn. Kommunikation
 - Verfügbarkeit
 - Kontrolle/Einflussname
+- "Home/Office" Automation Plattform
+  - Open Source
+  - Grosse Anzahl aktive Entwickler
+  - offenes API
+  - agnostisch
 
-** Lokal **
+**Lokal**
 - Sensoring
+- Neztwerk/techn. Kommunikation
 - Microcomputing
 - Edge-Computing
 
-** Remote **
+**Remote**
 - Datenzugriff
 - Aktuatorensteuerung
 - Profilierung
 - Kommunikationsplattformen
 
+### Wahl einer geeigneten "home" automation Plattform
