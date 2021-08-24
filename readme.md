@@ -23,20 +23,24 @@ Der erste Schritt gilt einer Bestandesaufname von Raum und potentiell eingesetzt
 
 ![IoT_inventory](/assets/images/IoT_inventory.jpeg)
 
-Diese teilt sich in die Kategorien auf:
 
 Daten- Verarbeitung und - Kommunkation:
 Menge|Artikel|Details|Einsatz
--|-|-|
-2|Raspberry Pi| 4B 4 GB|Daten- Verarbeitung und - Kommunkation
-
-2|Grove Sonnenlicht-Sensor|v1.0, SI1145|Sensor
-3|Grove Digital Licht-Sensor|TSL2561|Sensor
-3|Grove Soundsensor| LM386|Sensor
-2|SONOFF Temp. und Luftfeuchtesensor||Sensor
-1|SONOFF 1 Kanal Schaltaktor ZigBee||Aktuator
+-|-|-|-
+2| Raspberry Pi4B| 4GB| Daten- Verarbeitung und - Kommunkation
+2| Grove Sonnenlicht-Sensor| v1.0, SI1145| Sensor
+3| Grove Digital Licht-Sensor| TSL2561| Sensor
+3| Grove Soundsensor| LM386| Sensor
+2| SONOFF Temp. und Luftfeuchtesensor||Sensor
+1| SONOFF 1 Kanal Schaltaktor ZigBee||Aktuator
 2| Tür/Fensterkontakt| WLAN| Sensor
-1|SONOFF Smarte IP Überwachungskamera|WLAN|Sensor
-1|SONOFF Smartes Schalter||Sensor
-
+1| SONOFF Smarte IP Überwachungskamera| WLAN| Sensor
+1| SONOFF Smartes Schalter||Sensor
+5| MicroSDHC-Speicherkarte| 16GB Kingston| Daten- Verarbeitung und - Kommunkation
+3| Gehäuse für Raspberry Pi 3| Aluminium Schwarz| Daten- Verarbeitung und - Kommunkation
+9| 1 Kanal Schaltaktor WLAN| mit Messfunktion| Aktuator
+3| Raspberry Pi Netzteil| 5.1V, 3.0A| Daten- Verarbeitung und - Kommunkation
+3| Grove HCHO-Sensor7 WSP2110| Sensor
+3| Raspberry Pi Kühlgehäuse Pi4| schwarz| Daten- Verarbeitung und - Kommunkation
+3| Grove Raspberry Pi Shield| Base HAT| Daten- Verarbeitung und - Kommunkation
 Auktuatorik:
