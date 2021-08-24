@@ -113,3 +113,9 @@ iSmart Alarm (nur Sicherheits-System)| [Homee (multikompatible Zentrale)](https:
 [Mydlink Home](https://www.homeandsmart.de/mydlink-home-smart-home-system)| [QIVICON System](https://www.homeandsmart.de/qivicon-smart-home-plattform)| [Rademacher](https://www.homeandsmart.de/rademacher-smart-home-system-test)
 [Samsung SmartThings](https://www.homeandsmart.de/samsung-smartthings-kompatible-geraete)| [Schellenberg](https://www.homeandsmart.de/schellenberg-smart-home-system)| Schwaiger Home4You (multikompatible Zentrale)
 [SMART HOME by hornbach](https://www.homeandsmart.de/hornbach-smart-home-test)| Somfy TaHoma | Zipato Zipatile
+
+
+Die Suche nach "Open Source Home Automation App Design" tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/)
+
+
+
