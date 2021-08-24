@@ -134,25 +134,25 @@ iSmart Alarm (nur Sicherheits-System)| [Homee (multikompatible Zentrale)](https:
 [SMART HOME by hornbach](https://www.homeandsmart.de/hornbach-smart-home-test)| Somfy TaHoma | Zipato Zipatile
 
 
-Die Suche nach "Open Source Home Automation App Design" tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/) Da die 16 gelisteten Plattformen auf ubidots bereits kurz und prägnant beschrieben sind und zu jeder Plattform weiterführende Links vorhanden sind, verzichte ich hier auf eine beschreibung meinerseits. Die 16 Plattformen wurden auf diese Kriterien untersucht: a) Unterstützung von Linux, Mac und Windows, b) Open Source, grosse und aktive Entwickler Community, c) Cloud Runtime Unabhängigkeit, effizientes und gut strukturiertes Entwicklerkit, d) starke und gut dokumentierte API, die eine nahtlose Zusammenarbeit mit dem ZHAW MultiMico Projekt zulässt, e) grosse Anzahl untertützter Sensoren und Mobile App Support. 
+Die Suche nach "Open Source Home Automation App Design" tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/).  Da die 16 gelisteten Home Automation Entwicklungstools auf ubidots bereits kurz und prägnant beschrieben und zu jeder Plattform weiterführende Links vorhanden sind, verzichte ich hier auf eine Beschreibung meinerseits. 
 
-Nr.| Produkt| Plattformen| Open Source| Community| Cloud Dependency| Komplexität| unterstützte Sensoren/Aktuatoren| Mobile App
--|-|-|-|-|-|-|-
-1. openHab| Linux, Mac, Win, Docker| yes| 33'000| nein/Intranet of Things| adv. Developers| > 1500| 
-2. Home Assistant|
-3. OpenMotics|
-4. Jeedom|
-5. ioBroker|
-6. AGO Control|
-7. Domoticz|
-8. FHEM|
-9. Calaos|
-10. Pimatic|
-11. Homebridge.io|
-12. Smarthomatic|
-13. EvenGhost|
-14. MyController|
-15. PiDome|
-16. HomeGenie|
-17. ubidots|
+Diese 16 Produkte sind|-|-|- 
+-|-|-|-
+openHab| Home Assistant| OpenMotics| Jeedom
+ioBroker| AGO Control| Domoticz| FHEM
+Calaos| Pimatic| Homebridge.io| Smarthomatic
+EvenGhost| 1MyController| PiDome| HomeGenie
+ubidots
+
+Die auf ubidots verfügbaren Beschreibungen und Links zu diesen Produkten wurden auf folgende Kriterien untersucht: 
+Kriterien|-
+-|-
+Unterstützung von Linux, Mac und Windows| Open Source, grosse und aktive Entwickler Community
+Cloud Runtime Unabhängigkeit, effizientes und gut strukturiertes Entwicklerkit| starke und gut dokumentierte API, die eine nahtlose Zusammenarbeit mit dem ZHAW MultiMico Projekt zulässt
+grosse Anzahl untertützter Sensoren und Mobile App Support
+
+openHab erfüllte alle Kriterien und legt mit openHab 3.0 eine für unser Projekt sehr flexible und skalierbare Entwicklerplattform zur Verfügung. die Auswertung ergab: Untersützung der Betriebssysteme Linux, Mac, Win. Containeriserung mit Docker; grosse Entwicklergemeinde: 33'000;: Interö und Intanet fähig; mittlere Entwicklungskomplexität und PlugIns für über 1'5000 Sensoren und Aktuatoren.
+
+Ein zweiter interessanter Kandidat für das Living_Lab Projekt ist iBroker.
+...
 
