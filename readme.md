@@ -98,18 +98,18 @@ Definiert Form und Struktur der Signalübertragung| Bildet den physikalischen We
 Z-Wave, WLAN, - ZigBree, - KNX-RF/PL/TP (für Radio Frequency, also Funk, Power Line, Twisted Pair), - Bluetooth, - DECT, - HomeMatic| Funk (868 Mega-Hertz, 2,4 Giga-Hertz oder andere Frequenzen), - Power Line (PL, Übertragung über das Stromnetzkabel), - Datenleitung mit Glasfasern (FTTH: Fiber to the Home) oder Kupferkabeln (TP, Twisted Pair)| HomeKit von Apple läuft mit WLAN, - DigitalSTROM ist zugleich eigener Standard und nutzt Power Line. - Devolo arbeitet mit dem Z-Wave., - Qivicon ist mit HomeMatic kompatibel, - INNOXEL läuft über den CAN-Bus
 
 
-### Wahl einer geeigneten smarten "Home" Automation Plattform
+### Wahl einer geeigneten "Smart Home/Office Automation" Plattform
 Mittlerweile ist Home Automation kein Nischenthema mehr, sondern hat sich zu einer veritablen Indutrie mit unzähligen Anwendungsmöglichkeiten entwickelt.
 Die Neuentwicklung eines kompletten Ecosystems macht deshlab keinen Sinn. Aus Sicht einer Bildungsinstitution wie der ZHAW sind **offene Systeme** mit einem Open Standard, verfügbarer API, grosser und breit gefächerter Entwicklergemeinschaft sowie eine Vielzahl unterschiedlicher Anwendungen wichtiger als hochoptimierte, oft komplex zu bedienende und teure **geschlossene Systeme**. Zudem können bei den offenen Systemen Sensoren und Aktuatoren unterschiedlicher Hersteller eingesetzt werden, während sich die Anzahl bei geschlossenen Systemen auf die eines Herstellers und seines Partnernetzuwerkes beschränkt.
 [Home&Smart.de](https://www.homeandsmart.de/smart-home-systeme-vergleich) bietet einen umfassenden Vergleich von 2021 erhältlichen Home Automation Anbietern, Plattformen sowie Sensoren und Aktuatoren. Über die folgende Liste kommt man zu einer Kurzbeschreibung und -Redaktionsbewertung der vorgestellten SmartHome System Anbieter.
 Smart Home System Anbieter |||
 -|-|-
 [AVM FRITZ! Smart Home-System](https://www.homeandsmart.de/fritz-box-smart-home)| [Belkin WeMo System](https://www.homeandsmart.de/belkin-wemo)| [Bosch Smart Home-System](https://www.homeandsmart.de/bosch-smart-home-system-controller)
-Brennenstuhl / BrematicPRO| Busch Jäger| devolo Home Control System
-eNet SMART HOME| Digitalstrom| Eberle Wiser
-Eve Systems| Egardia Smart Home| GARDENA (nur Garten-System)
-Gigaset elements System (nur Sicherheits-System)| HomeMatic IP System| innogy Smart Home-System
-iSmart Alarm (nur Sicherheits-System)| Homee (multikompatible Zentrale)| Loxone 
-Mydlink Home| QIVICON System| Rademacher
+[Brennenstuhl / BrematicPRO](https://www.homeandsmart.de/brennenstuhl-brematic-smart-home)| Busch Jäger| [devolo Home Control System](https://www.homeandsmart.de/devolo-home-control-smart-home-zum-selbermachen)
+[eNet SMART HOME](https://www.enet-smarthome.com/de/)| [Digitalstrom](https://www.homeandsmart.de/einfach-ins-smart-home-digitalstrom-macht-auch-normale-technik-smart)| [Eberle Wiser](https://www.homeandsmart.de/eberle-wiser-smarte-mehrzonen-heizungssteuerung)
+[Eve Systems](https://www.homeandsmart.de/elgato-eve-homekit-sensoren-smart-home-siri-steuerung)| [Egardia Smart Home](https://www.homeandsmart.de/egardia-funk-alarmanlage-all-in-one)| [GARDENA (nur Garten-System)](https://www.homeandsmart.de/gardena-smart-system-smart-garden)
+[Gigaset elements System (nur Sicherheits-System)](https://www.homeandsmart.de/gigaset-elements-smart-home-system-sensoren)| [HomeMatic IP System](https://www.homeandsmart.de/homematic-ip-eq-3-hausautomation)| [innogy Smart Home-System](https://www.homeandsmart.de/innogy-smarthome)
+iSmart Alarm (nur Sicherheits-System)| [Homee (multikompatible Zentrale)](https://www.homeandsmart.de/homee-verbindet-smart-home-geraete-mit-homkit)| [Loxone](https://www.homeandsmart.de/loxone-smart-home) 
+[Mydlink Home](https://www.homeandsmart.de/mydlink-home-smart-home-system)| QIVICON System| Rademacher
 Samsung SmartThings| Schellenberg| Schwaiger Home4You (multikompatible Zentrale)
 SMART HOME by hornbach| Somfy TaHoma | Zipato Zipatile
