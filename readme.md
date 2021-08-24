@@ -28,14 +28,15 @@ Daten- Verarbeitung und - Kommunkation:
 Menge|Artikel|Details|Einsatz
 -|-|-|-
 2| Raspberry Pi4B| 4GB| Daten- Verarbeitung und - Kommunkation
+3| Raspberry Pi Stacking Header| 40-polig, RM| Daten- Verarbeitung und - Kommunkation
 2| Grove Sonnenlicht-Sensor| v1.0, SI1145| Sensor
 3| Grove Digital Licht-Sensor| TSL2561| Sensor
 3| Grove Soundsensor| LM386| Sensor
-2| SONOFF Temp. und Luftfeuchtesensor||Sensor
+3| SONOFF Temp. und Luftfeuchtesensor||Sensor
 1| SONOFF 1 Kanal Schaltaktor ZigBee||Aktuator
 2| Tür/Fensterkontakt| WLAN| Sensor
 1| SONOFF Smarte IP Überwachungskamera| WLAN| Sensor
-1| SONOFF Smartes Schalter||Sensor
+1| SONOFF Smarter Schalter||Sensor
 5| MicroSDHC-Speicherkarte| 16GB Kingston| Daten- Verarbeitung und - Kommunkation
 3| Gehäuse für Raspberry Pi 3| Aluminium Schwarz| Daten- Verarbeitung und - Kommunkation
 9| 1 Kanal Schaltaktor WLAN| mit Messfunktion| Aktuator
