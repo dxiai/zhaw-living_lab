@@ -26,6 +26,7 @@ Konzepte, Methoden und bereits umgesetzte Komponenten aus MultiMico werden zur E
 Der physische Living Lab Raum befindet sich im Raum 217 im ZHAW, Campus Reidbach, Gebäude RA. Der aktuelle Stand Plazierung und Anschluss der aktuell sichtbaren Aktuatoren:
 pictures||
 -|-|
+![screens_unpacked](/assets/images/dyson_humidifier.jpg)
 ![screens_unpacked](/assets/images/screens_unpacked.jpeg)| ![dyson_philips](/assets/images/dyson_philips.jpeg)
 
 ### IT-Infrastruktur
