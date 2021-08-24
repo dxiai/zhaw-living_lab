@@ -23,7 +23,11 @@ Diese Frage greift die aktuelle Entwicklung der Kapselung und Skalierung von Res
 Konzepte, Methoden und bereits umgesetzte Komponenten aus MultiMico werden zur Erreichnung der Living Lab Projektziele unterstützend eingesetzt. 
 
 ### Living_lab Location
-Der physische Living Lab Raum befindet sich im Raum 217 im ZHAW, Campus Reidbach, Gebäude RA.
+Der physische Living Lab Raum befindet sich im Raum 217 im ZHAW, Campus Reidbach, Gebäude RA. Der aktuelle Stand Plazierung und Anschluss der aktuell sichtbaren Aktuatoren:
+-|-|
+![IoT_inventory](/assets/images/screens_unpacked.jpeg)
+
+![IoT_inventory](/assets/images/dyson_philips.jpeg)
 (FOTO Panorama)
 
 ### IT-Infrastruktur
