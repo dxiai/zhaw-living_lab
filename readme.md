@@ -90,7 +90,7 @@ Für den Demonstrator entscheiden wir uns für die Erfassung der Raumparameter T
 - Profilierung
 - Übertragungsmedien
 
-Ein Überblick über die gebräuchlichsten Standards, Medien und Systeme
+Ein Überblick über die gebräuchlichsten Homeautomation Standards, Medien und Systeme
 
 **Kommunikationsstandard|	Übertragungsmedium|	Smart-Home-Systeme** *Quelle:[hausinfo.ch](https://hausinfo.ch/de/bauen-renovieren/haustechnik-vernetzung/smart-home-verkabelung-gebaeudeautomationen/systeme.html)*
 -|-|-
@@ -98,4 +98,18 @@ Definiert Form und Struktur der Signalübertragung| Bildet den physikalischen We
 Z-Wave, WLAN, - ZigBree, - KNX-RF/PL/TP (für Radio Frequency, also Funk, Power Line, Twisted Pair), - Bluetooth, - DECT, - HomeMatic| Funk (868 Mega-Hertz, 2,4 Giga-Hertz oder andere Frequenzen), - Power Line (PL, Übertragung über das Stromnetzkabel), - Datenleitung mit Glasfasern (FTTH: Fiber to the Home) oder Kupferkabeln (TP, Twisted Pair)| HomeKit von Apple läuft mit WLAN, - DigitalSTROM ist zugleich eigener Standard und nutzt Power Line. - Devolo arbeitet mit dem Z-Wave., - Qivicon ist mit HomeMatic kompatibel, - INNOXEL läuft über den CAN-Bus
 
 
-### Wahl einer geeigneten "home" automation Plattform
+### Wahl einer geeigneten smarten "Home" Automation Plattform
+Mittlerweile ist Home Automation kein Nischenthema mehr, sondern hat sich zu einer veritablen Indutrie mit unzähligen Anwendungsmöglichkeiten entwickelt.
+Die Neuentwicklung eines kompletten Ecosystems macht deshlab keinen Sinn. Aus Sicht einer Bildungsinstitution wie der ZHAW sind **offene Systeme** mit einem Open Standard, verfügbarer API, grosser und breit gefächerter Entwicklergemeinschaft sowie eine Vielzahl unterschiedlicher Anwendungen wichtiger als hochoptimierte, oft komplex zu bedienende und teure **geschlossene Systeme**. Zudem können bei den offenen Systemen Sensoren und Aktuatoren unterschiedlicher Hersteller eingesetzt werden, während sich die Anzahl bei geschlossenen Systemen auf die eines Herstellers und seines Partnernetzuwerkes beschränkt.
+[Home&Smart.de](https://www.homeandsmart.de/smart-home-systeme-vergleich) bietet einen umfassenden Vergleich von 2021 erhältlichen Home Automation Anbietern, Plattformen sowie Sensoren und Aktuatoren. Über die folgende Liste kommt man zu einer Kurzbeschreibung und -Redaktionsbewertung der vorgestellten SmartHome System Anbieter.
+Welche Smart Home System Anbieter gibt es?|||
+-|-|-
+AVM FRITZ! Smart Home-System| Belkin WeMo System| Bosch Smart Home-System
+Brennenstuhl / BrematicPRO| Busch Jäger| devolo Home Control System
+eNet SMART HOME| Digitalstrom| Eberle Wiser
+Eve Systems| Egardia Smart Home| GARDENA (nur Garten-System)
+Gigaset elements System (nur Sicherheits-System)| HomeMatic IP System| innogy Smart Home-System
+iSmart Alarm (nur Sicherheits-System)| Homee (multikompatible Zentrale)| Loxone 
+Mydlink Home| QIVICON System| Rademacher
+Samsung SmartThings| Schellenberg| Schwaiger Home4You (multikompatible Zentrale)
+SMART HOME by hornbach| Somfy TaHoma | Zipato Zipatile
