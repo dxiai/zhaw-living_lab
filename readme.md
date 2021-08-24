@@ -27,9 +27,16 @@ Diese teilt sich in die Kategorien auf:
 
 Daten- Verarbeitung und - Kommunkation:
 Menge|Artikel|Details|Einsatz
--|-|-
+-|-|-|
 2|Raspberry Pi| 4B 4 GB|Daten- Verarbeitung und - Kommunkation
 
-2|Grove Sonnenlicht-Sensor|v1.0, SI1145|Sensorik
+2|Grove Sonnenlicht-Sensor|v1.0, SI1145|Sensor
+3|Grove Digital Licht-Sensor|TSL2561|Sensor
+3|Grove Soundsensor| LM386|Sensor
+2|SONOFF Temp. und Luftfeuchtesensor|Sensor
+1|SONOFF 1 Kanal Schaltaktor ZigBee| Aktuator
+2| Tür/Fensterkontakt| WLAN| Sensor
+1|SONOFF Smarte IP Überwachungskamera|WLAN|Sensor
+1|SONOFF Smartes Schalter||Sensor
 
 Auktuatorik:
