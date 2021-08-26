@@ -12,7 +12,7 @@ openHAB codebase|-
 Das User Interface oder **UI** verfogt einen semantischen Ansatz und eignet sich deshalb sehr gut für eine rasche Konzept basierte Implementation. Die Technik wird dabei praktisch zu 100% abstrahiert, ganz im Sinne von *MultiMico*.
 Mit Blick auf eine reine Nutzung von openHAB spielt der semantisvce Ansatz eine untergeordnete Rolle. Dies, weil in einem solchen Fall eine professionelle IT Administration Setup und Kontrolle des Living Lab übernimmt. Das Living Lab ist aber viel mehr als ein futuristischer Meetingsraum. Es soll zu einem Forschungslab heranwachsen, in welchen viele innovative und nachhaltige Ideen und Konzepte effizient und effektiv umgesetzt und getestet werden können. Erhobene Daten müssen einfach zugänglich und agnostisch sein, so dass sie sich ohne Aufwand mit Statistik- und Analyseprogrammen bearbeiten lassen. 
 
-## Scriping Sprachen
+## Scripting Sprachen
 Interessanter und den breit gefächerten Programmierskills der Bachelorstudenten entgegenkommend ist die Möglichkeit Code in Jython, Javascript, Groovy und weiteren Programmiersprachen zu entwickeln. Daneben verfügt openHAB auch über eine eigene Regel basierte Scripting Sprache - Rule DSL.
 
 ## openHAB Installation
