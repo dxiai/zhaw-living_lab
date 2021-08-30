@@ -12,6 +12,12 @@ Die «physisch-technische» Vernetzung (z.B. Elektronik) ist nicht Gegenstand di
 
 # Methode
 ## Ausgangslage
+
+Für die Vision des Living Labs erweitere ich den Begriff der *Home Automation* zu ***Work-Home-Study Automation***. Der Grund dafür liegt nahe. Home Automation hatte ursprünglich einen rein technischen Fokus und einen experimentellen Character. Die breite und durch die 17 Nachhaltigkeitsziele der UN gestützte Diskussion rund um Nachhaltigkeit lenkt nun den Fokus auf Kontext bezogenen und eine zunehmend die Technik abstrahierende WHS Automation. Dieser Schritt ist evolutionär und grundlegend für alle natürlichen und von Menschen geschaffenen Prozesse. Für das Living Lab heisst das, IT-, Kommunikations- und IoT Infrastruktur müssen von Beginn weg offen, flexibel und sklalierbar aufgebaut werden. Es muss möglich sein, eine Idee, ein Konzept oder ein Prototyp auf hohen Abstraktionsgrad und mit wenigen Schritten unzusetzen. Ein simpler Vergleich ist das Autofahren: Türe aufschliessen, reinsetzen, Motor starten und losfahren. Natürlich ist dieser Vergleich extrem vereinfacht und abstrahiert viele *Schichten*. Um einige zu nennen: Forschnug und Entwicklung tausender ein Auto ausmachender Einzelteile, Sicherheit vor Diebstahl, bei Kollisionen und bei technischen Problemen sowie die Regulatorien wie: Handhabung des Autos, Vehalten im Verkehr und Wartungszyklen. Man erkennt unschwer, dass es weit mehr als nur die genannten Schichten gibt und dass jede für sich alleine genommen ein riesiges Spektrum an Einzelkomponennten umfasst.
+Dieses Beispiel soll vor AUgen führen, dass unser Alltag voll von hochgradig abstrahierten Tools und Prozessen ist und wir Tools nutzen, um effektiv und effizient sein zu können und um genügend Zeit für neue Ideen, Konzepte und Produkte haben zu können.
+Als Bildungsinstitution der angewandten Wissenschaften ist es unser Ziel, einzelne teilweise oder komplett abstahierte Schichten zu orchestrieren und so zu einem harmonischen Ganzen zusammenführen lassen. Harmonisch mit Blick auf den jeweiligen Zweck des Projektes. 
+Ein Beispiel ist das automatisierte Anpassung von Temperatur- und Lichtverhälnissen an die in einem Profil festgehaltenen Bedürfnisse von Personen, die sich in einem solchen Raum befinden und den gerade herrschenden Umwelt/Raumbedingungen.    
+
 ### Projekt MultiMico
 Das dxiai Projekt MultiMico unter Leitung von Dr. Christian Glahn beinhaltet die Beantwortung folgender Forschungsfrage: 
 > Der aktuelle Stand der Forschung zeigt eine grosse Lücke in Bereich der Gestaltung und dem Arrangement von bestehenden Informationssystemen zu multimodalen 
@@ -119,7 +125,7 @@ Z-Wave, WLAN, - ZigBree, - KNX-RF/PL/TP (für Radio Frequency, also Funk, Power 
 
 ### Wahl einer geeigneten "Smart Home/Office Automation" Plattform
 Mittlerweile ist Home Automation kein Nischenthema mehr, sondern hat sich zu einer veritablen Indutrie mit unzähligen Anwendungsmöglichkeiten entwickelt.
-Die Neuentwicklung eines kompletten Ecosystems macht deshlab keinen Sinn. Aus Sicht einer Bildungsinstitution wie der ZHAW sind **offene Systeme** mit einem Open Standard, verfügbarer API, grosser und breit gefächerter Entwicklergemeinschaft sowie eine Vielzahl unterschiedlicher Anwendungen wichtiger als hochoptimierte, oft komplex zu bedienende und teure **geschlossene Systeme**. Zudem können bei den offenen Systemen Sensoren und Aktuatoren unterschiedlicher Hersteller eingesetzt werden, während sich die Anzahl bei geschlossenen Systemen auf die eines Herstellers und seines Partnernetzuwerkes beschränkt.
+Die Neuentwicklung eines kompletten Ecosystems macht deshalb keinen Sinn. Aus Sicht einer Bildungsinstitution wie der ZHAW sind **offene Systeme** mit einem Open Standard, verfügbarer API, grosser und breit gefächerter Entwicklergemeinschaft sowie eine Vielzahl unterschiedlicher Anwendungen wichtiger als hochoptimierte, oft komplex zu bedienende und teure **geschlossene Systeme**. Zudem können bei den offenen Systemen Sensoren und Aktuatoren unterschiedlicher Hersteller eingesetzt werden, während sich die Anzahl bei geschlossenen Systemen auf die eines Herstellers und seines Partnernetzuwerkes beschränkt.
 [Home&Smart.de](https://www.homeandsmart.de/smart-home-systeme-vergleich) bietet einen umfassenden Vergleich von 2021 erhältlichen Home Automation Anbietern, Plattformen sowie Sensoren und Aktuatoren. Über die folgende Liste kommt man zu einer Kurzbeschreibung und -Redaktionsbewertung der vorgestellten SmartHome System Anbieter.
 Smart Home System Anbieter |||
 -|-|-
@@ -136,7 +142,7 @@ iSmart Alarm (nur Sicherheits-System)| [Homee (multikompatible Zentrale)](https:
 
 Die Suche nach "Open Source Home Automation App Design" tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/).  Da die 16 gelisteten Home Automation Entwicklungstools auf ubidots bereits kurz und prägnant beschrieben und zu jeder Plattform weiterführende Links vorhanden sind, verzichte ich hier auf eine Beschreibung meinerseits. 
 
-Diese 16 Produkte sind|-|-|- 
+Die 16 Produkte sind|-|-|- 
 -|-|-|-
 openHab| Home Assistant| OpenMotics| Jeedom
 ioBroker| AGO Control| Domoticz| FHEM
@@ -144,7 +150,16 @@ Calaos| Pimatic| Homebridge.io| Smarthomatic
 EvenGhost| 1MyController| PiDome| HomeGenie
 ubidots
 
-Die auf ubidots verfügbaren Beschreibungen und Links zu diesen Produkten wurden auf folgende Kriterien untersucht: 
+Die auf ubidots verfügbaren Beschreibungen und Links zu diesen Produkten habe ich auf folgende Kriterien untersucht: 
+
+Evaluationskriterien|-|-|-
+-|-|-|-
+Unterstützte Betriebssysteme| Open Source| Entwickler Community| Cloud Runtime Abhängigkeit|
+Entwicklertools| Programmiersprachen| unterstützte Sprachen| API vorhanden
+Anzahl untertützter Sensoren| Mobile App Support||
+
+Das ideale Work/Home/Study WHS-Automation Entwicklersystem so aus:
+
 Kriterien|-
 -|-
 Unterstützung von Linux, Mac und Windows| Open Source, grosse und aktive Entwickler Community
@@ -158,3 +173,29 @@ Die Auswertung ergab: Unterstützung der Betriebssysteme Linux, Mac, Win; Contai
 Ein zweiter interessanter Kandidat für das Living_Lab Projekt ist iBroker.
 ...
 
+
+### Entwicklungstools für einen ersten Prototypen
+Die IoT und WHS-Entwicklergemeinschaft (Work-Home-Study) ist aktiv und bemüht, Open Source Konzepte und Tools zu entwickeln, die ein Orchestrieren von IoT und WHS-Automation ermöglicht. Im Gegensatz zur Entwicklung von eigenen WHS-Automation Systemen bietet die Orchestrieung mehrere entscheidenden Vorteile.
+- Hunderte, wenn nicht tausende von Stunden Entwicklungszeit können gespart werden, zum Nulltarif
+- Im Sinne der Nachhaltigkeit werden diese Tools von vielen Entwicklern und Benutzern evolutionär fehlerbereinigt und verbessert. Eine Leistung die ein einzelner entwickler oder ein kleines Team nie schafft.
+- Durch die vielfältige Eigennutzung der Entwicklergemeinschaft stehen eine grosse Anzahl von Sensoren und Aktuatoren zur Verfügung. Diese wird laufend erweitert und auf den neuesten stand gebracht.
+- Das Orchestrieren von IoT und WHS Automation ist genau das, was wir an der ZHAW benötigen. Der Fokus soll auf dem Konzipieren und Analysieren von fachlich ausgelegten Aufgabenstellungen liegen und eine Spannweite von raschem Prototyping, Umsetzen von Machbarkeitsstudien und Feldversuchen bis hin zu Bachelor- und Masterarbeiten ermöglichen.
+
+
+Unter Berücksichtigen des bisher Bechriebenen schlage ich für die Umsetzung eines ersten Prototypen schlage ich die Video Tutorials von Andreas Spiess vor. Seit Jahren beschäftigt sich Andreas Spiess mit IoT und schafft es immer wieder, komplexe technische Sachverhalte einfach verständlich und "applied" vorzustellung und zu erklären. Gerade mit Blick auf ein LAB, wo ee darum geht möglichst breit gefächerte Fragestellungen zu behandeln, bieten die mittlerweile über 300 Videos eine reichhaltige und ergibige Quelle für IoT und auch WHS-Automation Projekte.
+![Andreas Spiess](/assets/images/andreas_spiess.png)
+
+Seine Videos für unser Anschauungsbeispiel:
+- #295 Raspberry Pi Server based on Docker, with VPN, Dropbox backup, Influx, Grafana, etc: IOTstack 
+![Home Automation Sever](/assets/images/docker_etc_uebersicht.png)
+![rpi-docker](/assets/images/rpi-docker.png)
+
+und
+
+- #352 Raspberry Pi4 Home Automation Server (incl. Docker, OpenHAB, HASSIO, NextCloud) 
+![from_sensor_to_display](/assets/images/from_sensor_to_display.png)
+
+![node-red](/assets/images/node-red.png)
+![portainer](/assets/images/portainer.png)
+
+sind Kochbuchanleitungen für das Aufsetzen eines WHS-Automation Knotens. Das Aufsetzen eines solchen Knotens b
