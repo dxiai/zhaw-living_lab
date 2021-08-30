@@ -182,4 +182,10 @@ Die IoT und WHS-Entwicklergemeinschaft (Work-Home-Study) ist aktiv und bemüht, 
 - Das Orchestrieren von IoT und WHS Automation ist genau das, was wir an der ZHAW benötigen. Der Fokus soll auf dem Konzipieren und Analysieren von fachlich ausgelegten Aufgabenstellungen liegen und eine Spannweite von raschem Prototyping, Umsetzen von Machbarkeitsstudien und Feldversuchen bis hin zu Bachelor- und Masterarbeiten ermöglichen.
 
 
+Unter Berücksichtigen des bisher Bechriebenen schlage ich für die Umsetzung eines ersten Prototypen schlage ich die Video Tutorials von Andreas Spiess vor. Seit Jahren beschäftigt sich Andreas Spiess mit IoT und schafft es immer wieder, komplexe technische Sachverhalte einfach verständlich und "applied" vorzustellung und zu erklären. Gerade mit Blick auf ein LAB, wo ee darum geht möglichst breit gefächerte Fragestellungen zu behandeln, bieten die mittlerweile über 300 Videos eine reichhaltige und ergibige Quelle für IoT und auch WHS-Automation Projekte.
 
+Seine Videos:
+- #295 Raspberry Pi Server based on Docker, with VPN, Dropbox backup, Influx, Grafana, etc: IOTstack und
+- #352 Raspberry Pi4 Home Automation Server (incl. Docker, OpenHAB, HASSIO, NextCloud) 
+
+sind Kochbuchanleitungen für das Aufsetzen eines WHS-Automation Knotens. Das Aufsetzen eines solchen Knotens b
