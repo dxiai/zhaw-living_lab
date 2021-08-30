@@ -26,10 +26,10 @@ Daraus ergibt sich direkt die zentrale Forschungsfrage für dieses Projekt:
 **Welche Gestaltungselemente und Daten strukturieren multimodale Interaktionen und können zur Prozesssteuerung in heterogenen Geräteumgebungen genutzt werden?**
 Diese Frage greift die aktuelle Entwicklung der Kapselung und Skalierung von Ressourcen im Cloud-Computing auf und richtet den Fokus auf die Interaktion im sogenannten Edge-ComputingUmgebungen, in denen Smartphones, PCs und Tablets im Verbund mit anderen Komponenten komplexe «Erlebnisräume» schaffen, was sowohl im aktuellen Diskurs und in der technischen Anwendung unterrepräsentiert ist. (2020, Christian Glahn)
 
-Konzepte, Methoden und bereits umgesetzte Komponenten aus MultiMico werden zur Erreichnung der Living Lab Projektziele unterstützend eingesetzt. 
+Konzepte, Methoden und bereits umgesetzte Komponenten aus MultiMico werden künftig zur Erreichnung der Living Lab Projektziele unterstützend eingesetzt. Der Prototyp beschränkt sich auf konzeoptionelle Elemente von MultiMico, die bereits Open Source verfügbar sind, wie z.B die Containerisierung.
 
 ### Living_lab Location
-Der physische Living Lab Raum befindet sich im Raum 217 im ZHAW, Campus Reidbach, Gebäude RA. Der aktuelle Stand Plazierung und Anschluss der aktuell sichtbaren Aktuatoren:
+Der physische Living Lab Raum befindet sich im Raum 217 im ZHAW, Campus Reidbach, Gebäude RA. Stand, Plazierung und Anschluss der aktuell sichtbaren Aktuatoren:
 Surface Hubs| Dyson Humidifier & Philips Hue| Humidifier & Philips Hue|
 -|-|-
 ![Surface Hubs](/assets/images/screens_unpacked.jpg)| ![dyson & philips](/assets/images/dyson_philips.jpg)| ![dyson & philips](/assets/images/humidifier_philips.jpg)
@@ -168,25 +168,24 @@ Cloud Runtime Unabhängigkeit, effizientes und gut strukturiertes Entwicklerkit|
 Support möglichst vieler sprachen|starke und gut dokumentierte API, die eine nahtlose Zusammenarbeit mit dem ZHAW MultiMico Projekt zulässt
 grosse Anzahl untertützter Sensoren und Mobile App Support
 
-openHab erfüllt alle Kriterien und stellt mit openHab 3.0 eine für unser Projekt sehr flexible und skalierbare Version zur Verfügung. 
+openHab erfüllt alle Kriterien und stellt mit openHab 3.0 eine für unsen Demonstrator sehr flexible und skalierbare Version zur Verfügung. 
 Die Auswertung ergab: Unterstützung der Betriebssysteme Linux, Mac, Win; Containeriserung mit Docker; grosse Entwicklergemeinde: 33'000; Lauffähig im Inter- und Intranet; Scripting mit Python, Javascript, Groovy oder Rule DSL; mittlere Entwicklungskomplexität, PlugIns für über 1'5000 Sensoren und Aktuatoren und aktuell werden 45 Sprachen unterstützt. Unter anderen auch Chinesisch, Arabisch Russisch und Hindi, was dem internationalen Studierenden Profil der ZHAW zu gute kommt.
 
-Ein zweiter interessanter Kandidat für das Living_Lab Projekt ist iBroker.
+Ein zweiter interessanter Kandidat für den Living_Lab Demonstrator ist iBroker.
 ...
 
 
-### Entwicklungstools für einen ersten Prototypen
-Die IoT und WHS-Entwicklergemeinschaft (Work-Home-Study) ist aktiv und bemüht, Open Source Konzepte und Tools zu entwickeln, die ein Orchestrieren von IoT und WHS-Automation ermöglicht. Im Gegensatz zur Entwicklung von eigenen WHS-Automation Systemen bietet die Orchestrieung mehrere entscheidenden Vorteile.
-- Hunderte, wenn nicht tausende von Stunden Entwicklungszeit können gespart werden, zum Nulltarif
-- Im Sinne der Nachhaltigkeit werden diese Tools von vielen Entwicklern und Benutzern evolutionär fehlerbereinigt und verbessert. Eine Leistung die ein einzelner entwickler oder ein kleines Team nie schafft.
+### Entwicklungstools für unseren Demonstrator
+Die IoT und WHS-Entwicklergemeinschaft (Work-Home-Study) ist aktiv und bemüht, Open Source Konzepte und Tools zu entwickeln, die ein Orchestrieren von IoT und WHS-Automation ermöglicht. Im Gegensatz zur Entwicklung von eigenen WHS-Automation Systemen bietet die Orchestrieung entscheidenden Vorteile.
+- Hunderte, wenn nicht tausende von Stunden Entwicklungszeit können gespart werden, zum Nulltarif.
+- Im Sinne der Nachhaltigkeit werden diese Tools von vielen Entwicklern und Benutzern evolutionär fehlerbereinigt, verbessert und weiterentwickelt. Eine Leistung die ein einzelner Entwickler oder ein kleines Team nie schafft.
 - Durch die vielfältige Eigennutzung der Entwicklergemeinschaft stehen eine grosse Anzahl von Sensoren und Aktuatoren zur Verfügung. Diese wird laufend erweitert und auf den neuesten stand gebracht.
-- Das Orchestrieren von IoT und WHS Automation ist genau das, was wir an der ZHAW benötigen. Der Fokus soll auf dem Konzipieren und Analysieren von fachlich ausgelegten Aufgabenstellungen liegen und eine Spannweite von raschem Prototyping, Umsetzen von Machbarkeitsstudien und Feldversuchen bis hin zu Bachelor- und Masterarbeiten ermöglichen.
+- Das Orchestrieren von IoT und WHS-Automation ist genau das, was Studierende an der ZHAW benötigen. Der Fokus liegt auf dem Konzipieren und Analysieren von fachlich ausgelegten Aufgabenstellungen und soll rasches Prototyping, Umsetzen von Machbarkeitsstudien und Feldversuchen bis hin zu Bachelor- und Masterarbeiten ermöglichen.
 
-
-Unter Berücksichtigen des bisher Bechriebenen schlage ich für die Umsetzung eines ersten Prototypen schlage ich die Video Tutorials von Andreas Spiess vor. Seit Jahren beschäftigt sich Andreas Spiess mit IoT und schafft es immer wieder, komplexe technische Sachverhalte einfach verständlich und "applied" vorzustellung und zu erklären. Gerade mit Blick auf ein LAB, wo ee darum geht möglichst breit gefächerte Fragestellungen zu behandeln, bieten die mittlerweile über 300 Videos eine reichhaltige und ergibige Quelle für IoT und auch WHS-Automation Projekte.
+Unter Berücksichtigen des bisher Bechriebenen schlage ich für die Umsetzung unseres Demonstrators Video Tutorials von Andreas Spiess vor. Seit Jahren beschäftigt sich Andreas Spiess mit IoT und schafft es immer wieder, komplexe technische Sachverhalte einfach verständlich und "applied" vorzustellen. Gerade mit Blick auf ein LAB, wo es darum geht, möglichst breit gefächerte Fragestellungen zu behandeln, bieten die mittlerweile über 300 Videos eine reichhaltige und ergibige Quelle für IoT und auch WHS-Automation Projekte an.
 ![Andreas Spiess](/assets/images/andreas_spiess.png)
 
-Seine Videos für unser erstes Projekt:
+Seine Videos für unseren Demonstrator:
 
 #### #295 Raspberry Pi Server based on Docker, with VPN, Dropbox backup, Influx, Grafana, etc: IoTstack 
 ![Home Automation Sever](/assets/images/docker_etc_uebersicht.png)
@@ -202,9 +201,10 @@ sind Kochbuchanleitungen für das Aufsetzen eines WHS-Automation Knotens. Das Au
 
 
 ## Bemerkung 30.08.21
-Zum aktuellen Zeitpunkt sind noch alle Kapitel beschrieben. Die wichtigsten und für die Umsetzung eines ersten Beispiels notwendigen Abschnitte jedich schon.
-Der vorgestellte Implementierungsansatz berücksichtigt noch nicht die gegenüber den verfügbaren Open Source Konzepten und Tools gemachten Erweiterungen des ZHAW internen MultiMico Projektes. Dieses geht in Hinblick auf das oben beschriebene Iot und WHS-Automation Server Konzept ein grosses Stück weiter und erlaubt eine weitaus umfassendere Flexibilisierung und Skalierung von vernetzen Systemen. 
-Unser erstes Projekt kann direkt aus dem Living Lab Inventar und den beiden Videos #295 und #352 von Andreas Spiess aufgebaut werden. Die aufgabenspezifische Arbeit liegt dabei in der visuellen Programmierung und Parametrisierung mit Node-Red. 
+Zum aktuellen Zeitpunkt sind noch nicht alle Kapitel beschrieben. Die wichtigsten und für die Umsetzung eines ersten Beispiels notwendigen Abschnitte jedoch schon.
+Der vorgestellte Implementierungsansatz berücksichtigt inkludiert die verfügbaren Open Source Konzepte und Tools, jedoch noch nicht die Erweiterungen des ZHAW internen MultiMico Projektes. Diese gehen in Hinblick auf das oben beschriebene Iot und WHS-Automation Server Konzept ein grosses Stück weiter und erlauben eine weitaus umfassendere Flexibilisierung und Skalierung von vernetzen Iot- und WHS-Automation Systemen.
+
+Unser Demonstrator kann direkt aus dem Living Lab Inventar und den beiden Videos #295 und #352 von Andreas Spiess aufgebaut werden. Die aufgabenspezifische Arbeit liegt dabei in der visuellen Programmierung und Parametrisierung mit Node-Red. 
 
 Die vorbereitenden Schritte sind gemacht. Die nächsten Schritte sind:
 - Versuchsaufbau wie weiter oben unter "Vesuchsaufbau" beschrieben vorbereiten.
