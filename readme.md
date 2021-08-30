@@ -213,6 +213,6 @@ Die vorbereitenden Schritte sind gemacht. Die nächsten Schritte sind:
 - Versuchsaufbau mit Node-Red umsetzen
 - Prototyp testen
 - Prototyp beschreiben
-- Lösung präsentieren
+- Lösung präsentieren 
 
 ----------------------------------------
