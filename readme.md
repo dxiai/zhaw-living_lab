@@ -72,6 +72,7 @@ In einem ersten Schritt soll eine Machbarkeitsstudie in Form eines Demonstrators
 
 Die «physisch-technische» Vernetzung (z.B. Elektronik) ist nicht Gegenstand dieses Anschubprojektes.
 
+#### Versuchsaufbau 
 Für den Demonstrator entscheiden wir uns für die Erfassung der Raumparameter Temperatur, Feuchtigkeit, Licht, Geräusch. Eine IP Kamera ergänzt die so erfassten Raumdaten durch einen optischen Sensor, über den sich zusätzliche visuelle Informationen zu den Raumverhältnissen gewinnen lassen. Die Raumparameter werden entweder voll programmgesteuert, semi-automatisch oder sind manuell veränderbar.
 
 ### System Anforderungen
@@ -187,7 +188,7 @@ Unter Berücksichtigen des bisher Bechriebenen schlage ich für die Umsetzung ei
 
 Seine Videos für unser erstes Projekt:
 
-#### #295 Raspberry Pi Server based on Docker, with VPN, Dropbox backup, Influx, Grafana, etc: IOTstack 
+#### #295 Raspberry Pi Server based on Docker, with VPN, Dropbox backup, Influx, Grafana, etc: IoTstack 
 ![Home Automation Sever](/assets/images/docker_etc_uebersicht.png)
 ![rpi-docker](/assets/images/rpi-docker.png)
 
@@ -197,4 +198,20 @@ und
 ![from_sensor_to_display](/assets/images/from_sensor_to_display.png)
 ![node-red](/assets/images/node-red.png)
 
-sind Kochbuchanleitungen für das Aufsetzen eines WHS-Automation Knotens. Das Aufsetzen eines solchen Knotens b
+sind Kochbuchanleitungen für das Aufsetzen eines WHS-Automation Knotens. Das Aufsetzen eines solchen WHS-Automation Severs/Knoten.
+
+
+## Bemerkung 30.08.21
+Zum aktuellen Zeitpunkt sind noch alle Kapitel beschrieben. Die wichtigsten und für die Umsetzung eines ersten Beispiels notwendigen Abschnitte jedich schon.
+Der vorgestellte Implementierungsansatz berücksichtigt noch nicht die gegenüber den verfügbaren Open Source Konzepten und Tools gemachten Erweiterungen des ZHAW internen MultiMico Projektes. Dieses geht in Hinblick auf das oben beschriebene Iot und WHS-Automation Server Konzept ein grosses Stück weiter und erlaubt eine weitaus umfassendere Flexibilisierung und Skalierung von vernetzen Systemen. 
+Unser erstes Projekt kann direkt aus dem Living Lab Inventar und den beiden Videos #295 und #352 von Andreas Spiess aufgebaut werden. Die aufgabenspezifische Arbeit liegt dabei in der visuellen Programmierung und Parametrisierung mit Node-Red. 
+
+Die vorbereitenden Schritte sind gemacht. Die nächsten Schritte sind:
+- Versuchsaufbau wie weiter oben unter "Vesuchsaufbau" beschrieben vorbereiten.
+- Aufsetzen von 2 Raspberry Pi WHS-Automation Servern gemäss Video #352
+- Versuchsaufbau mit Node-Red umsetzen
+- Prototyp testen
+- Prototyp beschreiben
+- Lösung präsentieren
+
+----------------------------------------
