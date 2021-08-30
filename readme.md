@@ -188,13 +188,13 @@ Unter Berücksichtigen des bisher Bechriebenen schlage ich für die Umsetzung un
 
 Seine Videos für unseren Demonstrator:
 
-#### #295 Raspberry Pi Server based on Docker, with VPN, Dropbox backup, Influx, Grafana, etc: IoTstack 
+#### [#295 Raspberry Pi Server based on Docker, with VPN, Dropbox backup, Influx, Grafana, etc: IoTstack ](https://www.youtube.com/watch?v=a6mjt8tWUws)
 ![Home Automation Sever](/assets/images/docker_etc_uebersicht.png)
 ![rpi-docker](/assets/images/rpi-docker.png)
 
 und
 
-#### #352 Raspberry Pi4 Home Automation Server (incl. Docker, OpenHAB, HASSIO, NextCloud) 
+#### [#352 Raspberry Pi4 Home Automation Server (incl. Docker, OpenHAB, HASSIO, NextCloud)](https://www.youtube.com/watch?v=KJRMjUzlHI8&t=418s)
 ![from_sensor_to_display](/assets/images/from_sensor_to_display.png)
 ![node-red](/assets/images/node-red.png)
 
