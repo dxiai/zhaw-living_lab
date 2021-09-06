@@ -166,7 +166,7 @@ Kriterien|-
 -|-
 Unterstützung von Linux, Mac und Windows| Open Source, grosse und aktive Entwickler Community
 Cloud Runtime Unabhängigkeit, effizientes und gut strukturiertes Entwicklerkit| Programmiersprachen: Javascript, Python, Node.js
-Support möglichst vieler sprachen|starke und gut dokumentierte API, die eine nahtlose Zusammenarbeit mit dem ZHAW MultiMico Projekt zulässt
+Support möglichst vieler Sprachen|starke und gut dokumentierte API, die eine nahtlose Zusammenarbeit mit dem ZHAW MultiMico Projekt zulässt
 grosse Anzahl untertützter Sensoren und Mobile App Support
 
 openHab erfüllt alle Kriterien und stellt mit openHab 3.0 eine für unsen Demonstrator sehr flexible und skalierbare Version zur Verfügung. 
@@ -199,20 +199,5 @@ und
 ![node-red](/assets/images/node-red.png)
 
 sind Kochbuchanleitungen für das Aufsetzen eines WHS-Automation Knotens. Das Aufsetzen eines solchen WHS-Automation Severs/Knoten.
-
-
-## Bemerkung 30.08.21
-Zum aktuellen Zeitpunkt sind noch nicht alle Kapitel beschrieben. Die wichtigsten und für die Umsetzung eines ersten Beispiels notwendigen Abschnitte jedoch schon.
-Der vorgestellte Implementierungsansatz berücksichtigt inkludiert die verfügbaren Open Source Konzepte und Tools, jedoch noch nicht die Erweiterungen des ZHAW internen MultiMico Projektes. Diese gehen in Hinblick auf das oben beschriebene Iot und WHS-Automation Server Konzept ein grosses Stück weiter und erlauben eine weitaus umfassendere Flexibilisierung und Skalierung von vernetzen Iot- und WHS-Automation Systemen.
-
-Unser Demonstrator kann direkt aus dem Living Lab Inventar und den beiden Videos #295 und #352 von Andreas Spiess aufgebaut werden. Die aufgabenspezifische Arbeit liegt dabei in der visuellen Programmierung und Parametrisierung mit Node-Red. 
-
-Die vorbereitenden Schritte sind gemacht. Die nächsten Schritte sind:
-- Versuchsaufbau wie weiter oben unter "Vesuchsaufbau" beschrieben vorbereiten.
-- Aufsetzen von 2 Raspberry Pi WHS-Automation Servern gemäss Video #352
-- Versuchsaufbau mit Node-Red umsetzen
-- Prototyp testen
-- Prototyp beschreiben
-- Lösung präsentieren 
 
 ----------------------------------------
