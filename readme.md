@@ -41,14 +41,14 @@ Als Bildungsinstitution der angewandten Wissenschaften ist es unser Ziel, teilwe
 Ein Beispiel ist die automatisierte Anpassung von Temperatur- und Lichtverhälnissen an die in einem Profil festgehaltenen Bedürfnisse von Personen, die sich in einem solchen Raum befinden und an die gerade herrschenden Umwelt/Raumbedingungen.    
 
 ### Projekt MultiMico
-Das dxiai Projekt MultiMico unter Leitung von Dr. Christian Glahn beinhaltet die Beantwortung folgender Forschungsfrage: 
+Das dxiai Projekt MultiMico unter Leitung von Dr. Christian Glahn setzt sich mit der Beantwortung folgender Forschungsfrage auseinander: 
 > Der aktuelle Stand der Forschung zeigt eine grosse Lücke in Bereich der Gestaltung und dem Arrangement von bestehenden Informationssystemen zu multimodalen 
 Systemen für konkrete Prozesse und Anwendungen.
 Daraus ergibt sich direkt die zentrale Forschungsfrage für dieses Projekt:
 **Welche Gestaltungselemente und Daten strukturieren multimodale Interaktionen und können zur Prozesssteuerung in heterogenen Geräteumgebungen genutzt werden?**
 Diese Frage greift die aktuelle Entwicklung der Kapselung und Skalierung von Ressourcen im Cloud-Computing auf und richtet den Fokus auf die Interaktion im sogenannten Edge-ComputingUmgebungen, in denen Smartphones, PCs und Tablets im Verbund mit anderen Komponenten komplexe «Erlebnisräume» schaffen, was sowohl im aktuellen Diskurs und in der technischen Anwendung unterrepräsentiert ist. (2020, Christian Glahn)
 
-Konzepte, Methoden und bereits umgesetzte Komponenten aus MultiMico werden künftig zur Erreichnung der Living Lab Projektziele unterstützend eingesetzt. Der Prototyp beschränkt sich auf konzeoptionelle Elemente von MultiMico, die bereits Open Source verfügbar sind, wie z.B die Containerisierung.
+Konzepte, Methoden und bereits umgesetzte Komponenten aus MultiMico werden künftig zur Erreichnung der Living Lab Projektziele unterstützend eingesetzt. Der angedachte Demonstrator hingegen beschränkt sich auf konzeptionelle Elemente von MultiMico, die bereits Open Source verfügbar sind, wie z.B die Containerisierung.
 
 ### Living_lab Location
 Der physische Living Lab Raum befindet sich im Raum 217 im ZHAW, Campus Reidbach, Gebäude RA. Stand, Plazierung und Anschluss der aktuell sichtbaren Aktuatoren:
@@ -57,11 +57,11 @@ Surface Hubs| Dyson Humidifier & Philips Hue| Humidifier & Philips Hue|
 ![Surface Hubs](/assets/images/screens_unpacked.jpg)| ![dyson & philips](/assets/images/dyson_philips.jpg)| ![dyson & philips](/assets/images/humidifier_philips.jpg)
 
 ### IT-Infrastruktur
-Die IT-Infrastruktur setzt sich aus Daten- Verarbeitung und - Kommunkation Systemen, Sensoren und Aktuatoren zusammen. Die folgende tabellarische Aufstellung zeigt die zur Verfügung stehenden Geräte und Systemkomponenten.
+Die IT-Infrastruktur setzt sich aus Datenverarbeitung und -kommunkation, Sensoren und Aktuatoren zusammen. Die folgende tabellarische Aufstellung zeigt die zur Verfügung stehenden Geräte und Systemkomponenten.
 
 ![IoT_inventory](/assets/images/IoT_inventory.jpg)
 
-Daten- Verarbeitung und - Kommunkation:
+Datenverarbeitung und -kommunkation:
 Menge|Artikel|Details|Einsatz
 -|-|-|-
 2| Raspberry Pi4B| 4GB| Daten- Verarbeitung und - Kommunkation
@@ -92,10 +92,10 @@ In einem ersten Schritt soll eine Machbarkeitsstudie in Form eines Demonstrators
 - individuelle Datenprofile und Nutzerprofile erlaubt
 - die erfassten Daten der einzelnen Systemkomponenten hinsichtlich Datenerhebung, und -austausch vernetzt und via API zugänglich macht.
 
-Die «physisch-technische» Vernetzung (z.B. Elektronik) ist nicht Gegenstand dieses Anschubprojektes.
+Die «physisch-technische» Vernetzung (z.B. Elektronik) ist nicht Gegenstand dieses Projektes.
 
 #### Versuchsaufbau 
-Für den Demonstrator entscheiden wir uns für die Erfassung der Raumparameter Temperatur, Feuchtigkeit, Licht, Geräusch. Eine IP Kamera ergänzt die so erfassten Raumdaten durch einen optischen Sensor, über den sich zusätzliche visuelle Informationen zu den Raumverhältnissen gewinnen lassen. Die Raumparameter werden entweder voll programmgesteuert, semi-automatisch oder sind manuell veränderbar.
+Für den Demonstrator entscheiden wir uns für die **Erfassung der Raumparameter Temperatur, Feuchtigkeit, Licht, Geräusch**. Eine **IP Kamera** ergänzt die so erfassten Raumdaten durch einen optischen Sensor, über den sich zusätzliche visuelle Informationen zu den Raumverhältnissen gewinnen lassen. Die Raumparameter werden entweder voll programmgesteuert, semi-automatisch oder sind manuell veränderbar.
 
 ### System Anforderungen
 **Gesamtsystem**
@@ -130,7 +130,7 @@ Z-Wave, WLAN, - ZigBree, - KNX-RF/PL/TP (für Radio Frequency, also Funk, Power 
 
 
 ### Wahl einer geeigneten "Smart Home/Office Automation" Plattform
-Mittlerweile ist Home Automation kein Nischenthema mehr, sondern hat sich zu einer veritablen Indutrie mit unzähligen Anwendungsmöglichkeiten entwickelt.
+Mittlerweile ist WHS Automation kein Nischenthema mehr, sondern hat sich zu einer veritablen Industrie mit unzähligen Anwendungsmöglichkeiten entwickelt.
 Die Neuentwicklung eines kompletten Ecosystems macht deshalb keinen Sinn. Aus Sicht einer Bildungsinstitution wie der ZHAW sind **offene Systeme** mit einem Open Standard, verfügbarer API, grosser und breit gefächerter Entwicklergemeinschaft sowie eine Vielzahl unterschiedlicher Anwendungen wichtiger als hochoptimierte, oft komplex zu bedienende und teure **geschlossene Systeme**. Zudem können bei den offenen Systemen Sensoren und Aktuatoren unterschiedlicher Hersteller eingesetzt werden, während sich die Anzahl bei geschlossenen Systemen auf die eines Herstellers und seines Partnernetzuwerkes beschränkt.
 [Home&Smart.de](https://www.homeandsmart.de/smart-home-systeme-vergleich) bietet einen umfassenden Vergleich von 2021 erhältlichen Home Automation Anbietern, Plattformen sowie Sensoren und Aktuatoren. Über die folgende Liste kommt man zu einer Kurzbeschreibung und -Redaktionsbewertung der vorgestellten SmartHome System Anbieter.
 Smart Home System Anbieter |||
@@ -146,7 +146,7 @@ iSmart Alarm (nur Sicherheits-System)| [Homee (multikompatible Zentrale)](https:
 [SMART HOME by hornbach](https://www.homeandsmart.de/hornbach-smart-home-test)| Somfy TaHoma | Zipato Zipatile
 
 
-Die Suche nach "Open Source Home Automation App Design" tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/).  Da die 16 gelisteten Home Automation Entwicklungstools auf ubidots bereits kurz und prägnant beschrieben und zu jeder Plattform weiterführende Links vorhanden sind, verzichte ich hier auf eine Beschreibung meinerseits. 
+Bei der Suche nach "Open Source Home Automation App Design" Tools in Google findet man rasch eine umfassende Zusammenstellung auf [ubidots](https://ubidots.com/blog/open-source-home-automation/).  Da die 16 gelisteten Home Automation Entwicklungstools auf ubidots bereits kurz und prägnant beschrieben und zu jeder Plattform weiterführende Links vorhanden sind, verzichte ich hier auf eine Detailbeschreibung. 
 
 Die 16 Produkte sind|-|-|- 
 -|-|-|-
