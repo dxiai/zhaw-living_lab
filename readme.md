@@ -55,7 +55,7 @@ Der physische Living Lab Raum befindet sich im Raum 217 im ZHAW, Campus Reidbach
 
 Surface Hubs| Dyson Humidifier & Philips Hue| Humidifier & Philips Hue
 -|-|-
-![Surface Hubs](/assets/images/screens_unpacked.png)| ![dyson & philips](/assets/images/dyson_philips.png)| ![dyson & philips](/assets/images/dyson_humidifier.png)
+![Surface Hubs](/assets/images/screens_unpacked.png)| ![dyson & philips](/assets/images/dyson_philips.png)| ![dyson & philips](/assets/images/humidifier_philips.png)
 
 ### IT-Infrastruktur
 Die IT-Infrastruktur setzt sich aus Datenverarbeitung und -kommunkation, Sensoren und Aktuatoren zusammen. Die folgende tabellarische Aufstellung zeigt die zur Verfügung stehenden Geräte und Systemkomponenten.
