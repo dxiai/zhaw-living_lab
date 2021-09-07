@@ -156,7 +156,7 @@ Calaos| Pimatic| Homebridge.io| Smarthomatic
 EvenGhost| 1MyController| PiDome| HomeGenie
 ubidots
 
-Die auf ubidots verfügbaren Beschreibungen und Links zu diesen Produkten habe ich auf folgende Kriterien untersucht: 
+Die auf ubidots verfügbaren Beschreibungen und Links zu diesen Produkten habe ich auf folgende Kriterien hin untersucht: 
 
 Evaluationskriterien|-|-|-
 -|-|-|-
@@ -164,7 +164,7 @@ Unterstützte Betriebssysteme| Open Source| Entwickler Community| Cloud Runtime 
 Entwicklertools| Programmiersprachen| unterstützte Sprachen| API vorhanden
 Anzahl untertützter Sensoren| Mobile App Support||
 
-Das ideale Work/Home/Study WHS-Automation Entwicklersystem so aus:
+Das ideale WHS-Automation Entwicklersystem sieht so aus:
 
 Kriterien|-
 -|-
