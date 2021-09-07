@@ -1,12 +1,20 @@
 --- 
 layout: post
-title: Science Week 2021 
-date: 2021-08-12
-author: Nurdzane Memeti
+title: Living Lab 2021 
+date: 2021-09-07
+author: Daniel Bajka
 tags: 
-- Wissenschaftswoche
-- Spielerische und digitale Bildung
-- Entwickler*innen
+- Facility Management
+- Home Automation
+- WHS - Work-Home-Study Automation
+- IoT
+- MultiMico
+- Entwicklungstools
+- Programmierung
+- Containerisierung
+- Docker
+- OpenHab
+- Raspberry Pi
 ---
 # Living Lab - Work-Home-Study Automation
 ## Kurzbeschreibung, Partner und Ziele des Gesamtprojektes
@@ -26,10 +34,11 @@ Die «physisch-technische» Vernetzung (z.B. Elektronik) ist nicht Gegenstand di
 ### Ausgangslage
 #### Von Home Automation zu Work-Home-Study Automation, kurz WHS
 Für die Vision des Living Labs erweitere ich den Begriff der *Home Automation* zu ***Work-Home-Study Automation***. 
-Der Grund dafür liegt nahe. Home Automation hatte ursprünglich einen rein technischen Fokus und einen experimentellen Character. Die breite und durch die 17 Nachhaltigkeitsziele der UN gestützte Diskussion rund um Nachhaltigkeit lenkt nun den Fokus auf Kontext bezogenen und eine zunehmend die Technik abstrahierende WHS Automation. Dieser Schritt ist evolutionär und grundlegend für alle natürlichen und von Menschen geschaffenen Prozesse. Für das Living Lab heisst das, IT-, Kommunikations- und IoT Infrastruktur müssen von Beginn weg offen, flexibel und sklalierbar aufgebaut werden. Es muss möglich sein, eine Idee, ein Konzept oder ein Prototyp auf hohen Abstraktionsgrad und mit wenigen Schritten unzusetzen. Ein simpler Vergleich ist das Autofahren: Türe aufschliessen, reinsetzen, Motor starten und losfahren. Natürlich ist dieser Vergleich extrem vereinfacht und abstrahiert viele *Schichten*. Um einige zu nennen: Forschnug und Entwicklung tausender ein Auto ausmachender Einzelteile, Sicherheit vor Diebstahl, bei Kollisionen und bei technischen Problemen sowie die Regulatorien wie: Handhabung des Autos, Vehalten im Verkehr und Wartungszyklen. Man erkennt unschwer, dass es weit mehr als nur die genannten Schichten gibt und dass jede für sich alleine genommen ein riesiges Spektrum an Einzelkomponennten umfasst.
-Dieses Beispiel soll vor AUgen führen, dass unser Alltag voll von hochgradig abstrahierten Tools und Prozessen ist und wir Tools nutzen, um effektiv und effizient sein zu können und um genügend Zeit für neue Ideen, Konzepte und Produkte haben zu können.
-Als Bildungsinstitution der angewandten Wissenschaften ist es unser Ziel, einzelne teilweise oder komplett abstahierte Schichten zu orchestrieren und so zu einem harmonischen Ganzen zusammenführen lassen. Harmonisch mit Blick auf den jeweiligen Zweck des Projektes. 
-Ein Beispiel ist das automatisierte Anpassung von Temperatur- und Lichtverhälnissen an die in einem Profil festgehaltenen Bedürfnisse von Personen, die sich in einem solchen Raum befinden und den gerade herrschenden Umwelt/Raumbedingungen.    
+Der Grund dafür liegt nahe. Home Automation hatte ursprünglich einen rein technischen Fokus und einen experimentellen Character. Die breite und durch die 17 Nachhaltigkeitsziele der UN gestützte Diskussion rund um Nachhaltigkeit lenkt nun den Fokus auf Kontext bezogenen und eine zunehmend die Technik abstrahierende WHS Automation. Dieser Schritt ist evolutionär und grundlegend für alle natürlichen und von Menschen geschaffenen Prozesse. Für das Living Lab heisst das, IT-, Kommunikations- und IoT Infrastruktur müssen von Beginn weg offen, flexibel und sklalierbar aufgebaut werden. Es muss möglich sein, eine Idee, ein Konzept oder einen Prototyp auf hohem Abstraktionsgrad und mit wenigen Schritten unzusetzen. Ein simpler Vergleich ist das Autofahren: Türe aufschliessen, reinsetzen, Motor starten und losfahren. Natürlich ist dieser Vergleich extrem vereinfacht und abstrahiert viele *Schichten*. Um einige zu nennen: Forschung und Entwicklung tausender ein Auto ausmachender Einzelteile, Sicherheit vor Diebstahl oder bei Kollisionen und technischen Problemen, sowie die Regulatorien wie: Handhabung des Autos, Vehalten im Verkehr und bei Wartungszyklen. Man erkennt unschwer, dass es weit mehr als nur die genannten Schichten gibt und dass jede für sich alleine genommen ein riesiges Spektrum an Einzelkomponennten umfasst.
+Dieses Beispiel soll vor AUgen führen, dass unser Alltag voll von hochgradig abstrahierten Tools und Prozessen ist und wir Tools nutzen, um effektiv und effizient sein zu können und um uns so genügend Freiraum für neue Ideen, Konzepte und Innovationen zu geben.
+
+Als Bildungsinstitution der angewandten Wissenschaften ist es unser Ziel, teilweise oder komplett abstahierte Schichten zu orchestrieren und so zu einem harmonischen Ganzen zusammenzuführen. Harmonisch mit Blick auf den jeweiligen Zweck des Projektes. 
+Ein Beispiel ist die automatisierte Anpassung von Temperatur- und Lichtverhälnissen an die in einem Profil festgehaltenen Bedürfnisse von Personen, die sich in einem solchen Raum befinden und an die gerade herrschenden Umwelt/Raumbedingungen.    
 
 ### Projekt MultiMico
 Das dxiai Projekt MultiMico unter Leitung von Dr. Christian Glahn beinhaltet die Beantwortung folgender Forschungsfrage: 
