@@ -63,8 +63,9 @@ Die IT-Infrastruktur setzt sich aus Datenverarbeitung und -kommunkation, Sensore
 ![IoT_inventory](/assets/images/IoT_inventory.jpg)
 
 Datenverarbeitung und -kommunkation:
-Menge|Artikel|Details|Einsatz
--|-|-|-
+
+Menge | Artikel | Details | Einsatz
+--- | --- | --- | ---
 2| Raspberry Pi4B| 4GB| Daten- Verarbeitung und - Kommunkation
 3| Raspberry Pi Stacking Header| 40-polig, RM| Daten- Verarbeitung und - Kommunkation
 2| Grove Sonnenlicht-Sensor| v1.0, SI1145| Sensor
